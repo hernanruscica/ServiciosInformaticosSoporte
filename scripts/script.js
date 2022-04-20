@@ -86,6 +86,6 @@ subcategorias = JSON.parse(subcategoriasText);
 }
 populate().then(() => {                  
         llenarSubcategorias(subcategorias["subcategorias"]);
-        llenarOfertas(subcategorias["subcategorias"]["1"]["ofertas"]);
+        llenarOfertas(subcategorias["subcategorias"]["0"]["ofertas"]);
         });          
 console.clear();

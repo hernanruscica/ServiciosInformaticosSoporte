@@ -12,7 +12,7 @@
                         "id": 0,
                         "titulo": "Error de conectividad a través de VPN o Escritorio Remoto",
                         "descripcion": "Error de conexión a los equipos del ministerio, o errores en la conexión vía VPN.",
-                        "icono": "url",
+                        "icono": "02.01.01.png",
                         "captura": "url"
                     }]
         },
@@ -99,21 +99,21 @@
                         "id": 0,
                         "titulo": "Error de conectividad a la red",
                         "descripcion": "Permite gestionar los incidentes vinculados a errores de conectividad a la red de datos del organismo, en una PC o Notebook determinada.",
-                        "icono": "url",
+                        "icono": "02.03.01.png",
                         "captura": "url"
                     },
                     {
                         "id": 1,
                         "titulo": "Error de conectividad inalámbrica - Wifi",
                         "descripcion": "Errores en la conectividad interna del ministerio mediante redes inalámbricas (WiFi) tanto en PC's/Notebooks como en dispositivos móviles.",
-                        "icono": "url",
+                        "icono": "02.03.02.png",
                         "captura": "url"
                     },
                     {
                         "id": 2,
                         "titulo": "Error o lentitud en enlace del interior del país",
                         "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en los enlaces de red de dependencias ubicadas en el interior del país. Es importante señalar que esta opción no es válida para los inconvenientes propios de una PC (para ellos, se debe utilizar la opción 'Error de conectividad a la red o navegación en PC'), sino que aplica para los inconvenientes de conectividad (tanto por caída de la red como por lentitud) que afectan a la totalidad de la dependencia.",
-                        "icono": "url",
+                        "icono": "02.03.03.png",
                         "captura": "url"
                     }
                     ]   
@@ -129,7 +129,7 @@
                         "id": 0,
                         "titulo": "Error de impresión - Impresora",
                         "descripcion": "Permite gestionar los incidentes vinculados a errores de impresión en impresoras y multifunciones.",
-                        "icono": "url",
+                        "icono": "02.04.01.png",
                         "captura": "url"
                     }
                     ]
@@ -145,7 +145,7 @@
                     "id": 0,
                     "titulo": "Error en la telefonía fija",
                     "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten los dispositivos de telefonía fija (IP). Se aplica tanto para fallas de funcionamiento, cables, etc., como para inconvenientes de conectividad.",
-                    "icono": "url",
+                    "icono": "02.05.01.png",
                     "captura": "url"
                     }
                     ]
@@ -161,49 +161,49 @@
                     "id": 0,
                     "titulo": "Error al ingresar a un sitio de internet",
                     "descripcion": "Permite reportar errores de acceso a un sitio de internet en específico.",
-                    "icono": "url",
+                    "icono": "02.06.01.png",
                     "captura": "url"
                     },
                     {
                     "id": 1,
                     "titulo": "Error al utilizar software instalado en PC",
                     "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de software instalado en la PC. Por ejemplo: Errores en paquete Office (Word, Excel, Outlook, etc.), Adobe, Navegadores de internet, etc.",
-                    "icono": "url",
+                    "icono": "02.06.02.png",
                     "captura": "url"
                     },
                     {
                     "id": 2,
                     "titulo": "Error de Outlook - Correo electrónico",
                     "descripcion": "Permite gestionar los incidentes relacionados al correo electrónico institucional, incluyendo aquéllos que afecten al programa Outlook.",
-                    "icono": "url",
+                    "icono": "02.06.03.png",
                     "captura": "url"
                     },
                     {
                     "id": 3,
                     "titulo": "Error en monitor",
                     "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten al monitor de una PC. Se aplica tanto para fallas de funcionamiento, como para inconvenientes de conectividad.",
-                    "icono": "url",
+                    "icono": "02.06.04.png",
                     "captura": "url"
                     },
                     {
                     "id": 4,
                     "titulo": "Falla en teclado o mouse",
                     "descripcion": "Permite gestionar fallas en teclado y mouse conectados a equipos del organismo. Aplica tanto para inconvenientes de funcionamiento como de conectividad.",
-                    "icono": "url",
+                    "icono": "02.06.05.png",
                     "captura": "url"
                     },
                     {
                     "id": 5,
                     "titulo": "Lentitud al utilizar una PC o Notebook",
                     "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de lentitud en el uso de una PC o Notebook.",
-                    "icono": "url",
+                    "icono": "02.06.06.png",
                     "captura": "url"
                     },
                     {
                     "id": 6,
                     "titulo": "Pc - Notebook no enciende o no inicia",
                     "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten el encendido o inicio de una PC o Notebook y que, por lo tanto, impiden completamente su uso.",
-                    "icono": "url",
+                    "icono": "02.06.07.png",
                     "captura": "url"
                     }
                     ]
