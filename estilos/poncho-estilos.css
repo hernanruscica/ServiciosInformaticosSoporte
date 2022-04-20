@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} 
 
 .hero-image{
     height: 40vh;
@@ -54,16 +54,19 @@
     display: flex;
     flex-direction: row;
     border: solid 1px grey;
+    padding-top: 1em;
 }
 
 .subcategorias{
     border: solid 1px grey;
+    padding: 0em 0.5em;
     width: 30%;
 }
 .subcategoria-item{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0.8em 0.4em 0.8em 0.4em;
 }
 .subcategoria-item:hover{
     border: solid thin grey;
@@ -71,11 +74,16 @@
     cursor: pointer;
 }
 .subcategoria-imagen{
-    width: 50px;
+    width: 36px;
     height: auto;
+}
+
+.subcategoria-descripcion{
+    font-size: 0.8 em;
 }
 
 .ofertas {
     border: solid 1px grey;
+    padding: 0em 0.8em;
     width: 68%;
 }

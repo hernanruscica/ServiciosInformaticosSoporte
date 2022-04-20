@@ -11,12 +11,12 @@ const crearNuevoSubcategoriaItem = (titulo, imagen) => {
 
     let $subCategoriasItem = document.createElement("div");
     let $subCategoriasImagen = document.createElement("img");
-    let $subCategoriasTitulo = document.createElement("h3");
+    let $subCategoriasTitulo = document.createElement("p");
     
 
     $subCategoriasItem.classList.add("subcategoria-item");
     $subCategoriasImagen.classList.add("subcategoria-imagen");
-    $subCategoriasTitulo.classList.add("subcategoria-titulo");
+    $subCategoriasTitulo.classList.add("subcategoria-descripcion");
     
 
     $subCategoriasTitulo.innerText = titulo;
@@ -64,7 +64,7 @@ const llenarOfertas = (ofertas) => {
     })
 }
 async function populate(){
-const requestURL = 'https://raw.githubusercontent.com/hernanruscica/ServiciosInformaticosTrabajo/master/sistemas-ayuda.json';
+const requestURL = 'https://raw.githubusercontent.com/hernanruscica/ServiciosInformaticosSoporte/master/sistemas-ayuda.json';
 const request = new Request(requestURL);
 
 const response = await fetch(request);

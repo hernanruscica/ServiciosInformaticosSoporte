@@ -27,63 +27,63 @@
                         "id": 0,
                         "titulo": "Error al acceder a una aplicación",
                         "descripcion": "Permite reportar inconvenientes en el acceso a aplicaciones.",
-                        "icono": "url",
+                        "icono": "02.02.01.png",
                         "captura": "url"
                     },
                     {
                         "id": 1,
                         "titulo": "Error al utilizar el DatawareHouse",
                         "descripcion": "Permite reportar inconvenientes en la explotación de datos con Excel Services",
-                        "icono": "url",
+                        "icono": "02.02.02.png",
                         "captura": "url"
                     },
                     {
                         "id": 2,
                         "titulo": "Error al Utilizar INDI",
                         "descripcion": "Permite gestionar inconvenientes con la utilización del sistema INDI.",
-                        "icono": "url",
+                        "icono": "02.02.03.png",
                         "captura": "url"
                     },
                     {
                         "id": 3,
                         "titulo": "Error al utilizar Liquidación Empleo",
                         "descripcion": "Permite gestionar los inconvenientes en el uso de la aplicación de Liquidación Empleo.",
-                        "icono": "url",
+                        "icono": "02.02.04.png",
                         "captura": "url"
                     },
                     {
                         "id": 4,
                         "titulo": "Error al utilizar PeopleNet",
                         "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de PeopleNet.",
-                        "icono": "url",
+                        "icono": "02.02.05.png",
                         "captura": "url"
                     },
                     {
                         "id": 5,
                         "titulo": "Error al utilizar PNRT",
                         "descripcion": "Permite gestionar inconvenientes con la utilización del sistema PNRT.",
-                        "icono": "url",
+                        "icono": "02.02.06.png",
                         "captura": "url"
                     },
                     {
                         "id": 6,
                         "titulo": "Error al utilizar Repro 2",
                         "descripcion": "Permite gestionar inconvenientes y errores en la utilización del sistema REPRO 2.",
-                        "icono": "url",
+                        "icono": "02.02.07.png",
                         "captura": "url"
                     },
                     {
                         "id":7,
                         "titulo": "Error al utilizar una aplicación",
                         "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de aplicaciones, luego de haber accedido a las mismas. Si, en cambio, no logró acceder a la aplicación, deberá emplear la plantilla 'Error al acceder a una aplicación'",
-                        "icono": "url",
+                        "icono": "02.02.08.png",
                         "captura": "url"
                     },
                     {
                         "id": 8,
                         "titulo": "lentitud al utilizar una aplicación",
                         "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de LENTITUD en el uso de aplicaciones, luego de haber accedido a las mismas.",
-                        "icono": "url",
+                        "icono": "02.02.09.png",
                         "captura": "url"
                     }
                     ]
