@@ -13,7 +13,6 @@ font-family: 'Encode Sans', sans-serif;
 body {
     font-family: 'Encode Sans', sans-serif;
 }
-
 .hero-image{
     height: 40vh;
     display: flex;
@@ -22,6 +21,33 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../01.Requerimientos/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.hero-image_content{
+    text-align: center;
+}
+
+.hero-image_content_titulo{
+    margin-bottom: 0.5em;
+}
+.hero-image_content_titulo a{
+    text-decoration: none;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 0.8em;    
+}
+
+.hero-image_content_input{
+    font-size: 1.2em;
+    padding: 0.6em 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #ddd;
+}
+
+.hero-image_content_input:focus{
+    background-color: #FFF;
+   
 }
 
 .container{
@@ -49,8 +75,18 @@ body {
 }
 .requerimiento-item:hover{
     border: solid thin grey;
-    background-color: cyan;
+    background-color: #f2f2f2;
     cursor: pointer;
+}
+
+ .activeReq{
+    background-color: #0072bb;
+    color: #ddd;
+}
+
+.activeReq:hover{
+    background-color: #42aaeb;
+    color: #ddd;
 }
 
 .requerimiento-imagen{
@@ -84,6 +120,17 @@ body {
     background-color: #f2f2f2;
     cursor: pointer;
 }
+
+.activeSub{
+    background-color: #0072bb;
+    color: #ddd;
+}
+
+.activeSub:hover{
+    background-color: #42aaeb;
+    color: #ddd;
+}
+
 .subcategoria-imagen{
     width: 36px;
     height: auto;
