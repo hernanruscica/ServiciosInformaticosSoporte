@@ -1,0 +1,228 @@
+
+  
+    {
+    "subcategorias": 
+        [{
+        "id": 0,
+        "titulo": "Acceso a mi equipo desde fuera del organismo",
+        "descripcion": "La siguiente categoría contiene ofertas para reportar cualquier tipo de falla que no permita la conexión remota con su equipo ubicado físicamente en el organismo, o errores en la conexión vía VPN. (Incluye el tratamiento de incidentes por equipos apagados).",
+        "icono": "02.01.00.svg",
+        "captura": "url",
+        "ofertas": [{
+                        "id": 0,
+                        "titulo": "Error de conectividad a través de VPN o Escritorio Remoto",
+                        "descripcion": "Error de conexión a los equipos del ministerio, o errores en la conexión vía VPN.",
+                        "icono": "url",
+                        "captura": "url"
+                    }]
+        },
+        {        
+        "id": 1,
+        "titulo": "Uso o Acceso a las aplicaciones",
+        "descripcion": "En esta categoría encontrará ofertas donde podrá reportar fallas relacionadas a aplicaciones o cualquier evento que no forme parte del funcionamiento habitual de estas aplicaciones incluyendo errores de acceso, de uso o lentitud.",
+        "icono": "02.02.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                        "id": 0,
+                        "titulo": "Error al acceder a una aplicación",
+                        "descripcion": "Permite reportar inconvenientes en el acceso a aplicaciones.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 1,
+                        "titulo": "Error al utilizar el DatawareHouse",
+                        "descripcion": "Permite reportar inconvenientes en la explotación de datos con Excel Services",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 2,
+                        "titulo": "Error al Utilizar INDI",
+                        "descripcion": "Permite gestionar inconvenientes con la utilización del sistema INDI.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 3,
+                        "titulo": "Error al utilizar Liquidación Empleo",
+                        "descripcion": "Permite gestionar los inconvenientes en el uso de la aplicación de Liquidación Empleo.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 4,
+                        "titulo": "Error al utilizar PeopleNet",
+                        "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de PeopleNet.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 5,
+                        "titulo": "Error al utilizar PNRT",
+                        "descripcion": "Permite gestionar inconvenientes con la utilización del sistema PNRT.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 6,
+                        "titulo": "Error al utilizar Repro 2",
+                        "descripcion": "Permite gestionar inconvenientes y errores en la utilización del sistema REPRO 2.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id":7,
+                        "titulo": "Error al utilizar una aplicación",
+                        "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de aplicaciones, luego de haber accedido a las mismas. Si, en cambio, no logró acceder a la aplicación, deberá emplear la plantilla 'Error al acceder a una aplicación'",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 8,
+                        "titulo": "lentitud al utilizar una aplicación",
+                        "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de LENTITUD en el uso de aplicaciones, luego de haber accedido a las mismas.",
+                        "icono": "url",
+                        "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 2,
+        "titulo": "La conectividad de mi equipo, dispositivo, o dependencia (dentro del organismo)",
+        "descripcion": "Aquí es donde encontrará las ofertas para reportar las fallas que estén relacionadas a la conectividad de su equipo con la red del Ministerio cuando se encuentre trabajando físicamente dentro del organismo.Esta categoría aplica tanto para inconvenientes en PC’s de escritorio, como también para Notebooks del organismo y dispositivos móviles que presenten inconvenientes al conectarse a dicha red inalámbrica.",
+        "icono": "02.03.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                        "id": 0,
+                        "titulo": "Error de conectividad a la red",
+                        "descripcion": "Permite gestionar los incidentes vinculados a errores de conectividad a la red de datos del organismo, en una PC o Notebook determinada.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 1,
+                        "titulo": "Error de conectividad inalámbrica - Wifi",
+                        "descripcion": "Errores en la conectividad interna del ministerio mediante redes inalámbricas (WiFi) tanto en PC's/Notebooks como en dispositivos móviles.",
+                        "icono": "url",
+                        "captura": "url"
+                    },
+                    {
+                        "id": 2,
+                        "titulo": "Error o lentitud en enlace del interior del país",
+                        "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en los enlaces de red de dependencias ubicadas en el interior del país. Es importante señalar que esta opción no es válida para los inconvenientes propios de una PC (para ellos, se debe utilizar la opción 'Error de conectividad a la red o navegación en PC'), sino que aplica para los inconvenientes de conectividad (tanto por caída de la red como por lentitud) que afectan a la totalidad de la dependencia.",
+                        "icono": "url",
+                        "captura": "url"
+                    }
+                    ]   
+        },
+        {
+        "id": 3,
+        "titulo": "La impresora o Multifunción",
+        "descripcion": "Esta categoría le permitirá encontrar las ofertas para reportar todas las fallas vinculadas a errores de impresión en impresoras y multifunciones del organismo.",
+        "icono": "02.04.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                        "id": 0,
+                        "titulo": "Error de impresión - Impresora",
+                        "descripcion": "Permite gestionar los incidentes vinculados a errores de impresión en impresoras y multifunciones.",
+                        "icono": "url",
+                        "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 4,
+        "titulo": "La telefonía fija",
+        "descripcion": "Permite gestionar a través de sus ofertas los incidentes vinculados a errores que afecten los dispositivos de telefonía fija",
+        "icono": "02.05.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Error en la telefonía fija",
+                    "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten los dispositivos de telefonía fija (IP). Se aplica tanto para fallas de funcionamiento, cables, etc., como para inconvenientes de conectividad.",
+                    "icono": "url",
+                    "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 5,
+        "titulo": "Mi pc o Notebook",
+        "descripcion": "Mediante las ofertas ligadas a esta categoría deberá reportar todas las fallas que afecten el funcionamiento de su Pc o Notebook o los  programas instalados en ella.",
+        "icono": "02.06.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Error al ingresar a un sitio de internet",
+                    "descripcion": "Permite reportar errores de acceso a un sitio de internet en específico.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 1,
+                    "titulo": "Error al utilizar software instalado en PC",
+                    "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de software instalado en la PC. Por ejemplo: Errores en paquete Office (Word, Excel, Outlook, etc.), Adobe, Navegadores de internet, etc.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 2,
+                    "titulo": "Error de Outlook - Correo electrónico",
+                    "descripcion": "Permite gestionar los incidentes relacionados al correo electrónico institucional, incluyendo aquéllos que afecten al programa Outlook.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 3,
+                    "titulo": "Error en monitor",
+                    "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten al monitor de una PC. Se aplica tanto para fallas de funcionamiento, como para inconvenientes de conectividad.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 4,
+                    "titulo": "Falla en teclado o mouse",
+                    "descripcion": "Permite gestionar fallas en teclado y mouse conectados a equipos del organismo. Aplica tanto para inconvenientes de funcionamiento como de conectividad.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 5,
+                    "titulo": "Lentitud al utilizar una PC o Notebook",
+                    "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de lentitud en el uso de una PC o Notebook.",
+                    "icono": "url",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 6,
+                    "titulo": "Pc - Notebook no enciende o no inicia",
+                    "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten el encendido o inicio de una PC o Notebook y que, por lo tanto, impiden completamente su uso.",
+                    "icono": "url",
+                    "captura": "url"
+                    }
+                    ]
+        },    
+        {
+        "id": 6,
+        "titulo": "Mi tablet o celular",
+        "descripcion": "Mi Tablet o celular",
+        "icono": "02.07.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Error en Tablet",
+                    "descripcion": "Permite gestionar fallas en las partes físicas o en las aplicaciones instaladas en las tablets del organismo (por ejemplo, las utilizadas para el sistema INDI).",
+                    "icono": "url",
+                    "captura": "url"
+                    }
+                    ]
+        }
+        ]
+}

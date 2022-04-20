@@ -1,0 +1,79 @@
+let subcategorias; 
+let imagesUrl = "./imagenes/"      
+const $subcategorias = document.getElementById("subcategorias");
+const $ofertas = document.getElementById("ofertas");
+
+
+
+const crearNuevoSubcategoriaItem = (titulo, imagen) => {
+    //inicio de creacion de la subcategoria        
+    let $subCategoriasFragment = document.createDocumentFragment();
+
+    let $subCategoriasItem = document.createElement("div");
+    let $subCategoriasImagen = document.createElement("img");
+    let $subCategoriasTitulo = document.createElement("h3");
+    
+
+    $subCategoriasItem.classList.add("subcategoria-item");
+    $subCategoriasImagen.classList.add("subcategoria-imagen");
+    $subCategoriasTitulo.classList.add("subcategoria-titulo");
+    
+
+    $subCategoriasTitulo.innerText = titulo;
+    $subCategoriasImagen.setAttribute("src", imagesUrl + imagen);
+
+    $subCategoriasItem.appendChild($subCategoriasImagen);  
+    $subCategoriasItem.appendChild($subCategoriasTitulo);  
+              
+
+    return $subCategoriasItem;
+    //fin de creacion de la subcategoria
+}        
+const crearNuevoOfertaItem = (titulo, descripcion) => {
+    //inicio de creacion de la oferta        
+    let $ofertasFragment = document.createDocumentFragment();
+
+    let $ofertasItem = document.createElement("div");
+    let $ofertasTitulo = document.createElement("h3");
+    let $ofertasDescripcion = document.createElement("p");
+
+    $ofertasItem.classList.add("oferta-item");
+    $ofertasTitulo.classList.add("oferta-titulo");
+    $ofertasDescripcion.classList.add("oferta-descripcion");
+
+    $ofertasTitulo.innerText = titulo;
+    $ofertasDescripcion.innerText = descripcion;
+
+    $ofertasItem.appendChild($ofertasTitulo);  
+    $ofertasItem.appendChild($ofertasDescripcion);            
+
+    return $ofertasItem;
+    //fin de creacion de la subcategoria
+}        
+const llenarSubcategorias = (subcats) => {
+    subcats.forEach(element => {                
+        const $nuevoSubcategoriaItem = crearNuevoSubcategoriaItem(element.titulo, element.icono);
+        $subcategorias.appendChild($nuevoSubcategoriaItem);
+    });
+    console.log("llenando subcats");
+}
+const llenarOfertas = (ofertas) => {
+    ofertas.forEach(element => {
+        const $nuevoOfertaItem = crearNuevoOfertaItem(element.titulo, element.descripcion);
+        $ofertas.appendChild($nuevoOfertaItem);
+    })
+}
+async function populate(){
+const requestURL = 'https://raw.githubusercontent.com/hernanruscica/ServiciosInformaticosTrabajo/master/sistemas-ayuda.json';
+const request = new Request(requestURL);
+
+const response = await fetch(request);
+const subcategoriasText = await response.text();
+
+subcategorias = JSON.parse(subcategoriasText);            
+}
+populate().then(() => {                  
+        llenarSubcategorias(subcategorias["subcategorias"]);
+        llenarOfertas(subcategorias["subcategorias"]["1"]["ofertas"]);
+        });          
+console.clear();

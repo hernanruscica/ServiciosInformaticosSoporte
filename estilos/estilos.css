@@ -1,0 +1,23 @@
+.container {    
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.categorias,
+.subcategorias,
+.ofertas{
+    width: 32%;
+    border: solid black 1px;
+    padding: 0 1em;
+}
+
+.categoria-item,
+.subcategoria-item,
+.oferta-item {
+    border: solid rebeccapurple 1px;
+}

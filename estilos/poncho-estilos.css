@@ -1,0 +1,81 @@
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../01.Requerimientos/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+}
+
+.requerimientos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 1px grey;
+}
+
+.requerimiento-item {
+    border: solid 1px grey;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.requerimiento-item:hover{
+    border: solid thin grey;
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.requerimiento-imagen{
+    width: 70px;
+    height: auto;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px grey;
+}
+
+.subcategorias{
+    border: solid 1px grey;
+    width: 30%;
+}
+.subcategoria-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.subcategoria-item:hover{
+    border: solid thin grey;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+.subcategoria-imagen{
+    width: 50px;
+    height: auto;
+}
+
+.ofertas {
+    border: solid 1px grey;
+    width: 68%;
+}
