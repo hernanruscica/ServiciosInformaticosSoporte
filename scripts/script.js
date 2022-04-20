@@ -29,25 +29,37 @@ const crearNuevoSubcategoriaItem = (titulo, imagen) => {
     return $subCategoriasItem;
     //fin de creacion de la subcategoria
 }        
-const crearNuevoOfertaItem = (titulo, descripcion) => {
+const crearNuevoOfertaItem = (titulo, descripcion, icono) => {
     //inicio de creacion de la oferta        
     let $ofertasFragment = document.createDocumentFragment();
 
     let $ofertasItem = document.createElement("div");
+    let $ofertasImagen = document.createElement("img");
+    let $ofertasTextos = document.createElement("div");
     let $ofertasTitulo = document.createElement("h3");
     let $ofertasDescripcion = document.createElement("p");
 
     $ofertasItem.classList.add("oferta-item");
+
+    $ofertasImagen.setAttribute("src", imagesUrl +  icono);
+    $ofertasImagen.classList.add("oferta-imagen");
+
     $ofertasTitulo.classList.add("oferta-titulo");
     $ofertasDescripcion.classList.add("oferta-descripcion");
 
     $ofertasTitulo.innerText = titulo;
-    $ofertasDescripcion.innerText = descripcion;
+    $ofertasDescripcion.innerText = descripcion;    
+    
+    $ofertasTextos.classList.add("oferta-textos");
+    $ofertasTextos.appendChild($ofertasTitulo);  
+    $ofertasTextos.appendChild($ofertasDescripcion);   
+    
+    $ofertasItem.appendChild($ofertasImagen);    
+    $ofertasItem.appendChild($ofertasTextos)
 
-    $ofertasItem.appendChild($ofertasTitulo);  
-    $ofertasItem.appendChild($ofertasDescripcion);            
+    $ofertasFragment = $ofertasItem;
 
-    return $ofertasItem;
+    return $ofertasFragment
     //fin de creacion de la subcategoria
 }        
 const llenarSubcategorias = (subcats) => {
@@ -59,7 +71,7 @@ const llenarSubcategorias = (subcats) => {
 }
 const llenarOfertas = (ofertas) => {
     ofertas.forEach(element => {
-        const $nuevoOfertaItem = crearNuevoOfertaItem(element.titulo, element.descripcion);
+        const $nuevoOfertaItem = crearNuevoOfertaItem(element.titulo, element.descripcion, element.icono);
         $ofertas.appendChild($nuevoOfertaItem);
     })
 }
