@@ -135,7 +135,7 @@ async function populate(){
     }
 populate().then(() => {  
         leyendoClicksRequerimientos();                
-        llenarSubcategorias(subcategorias["subcategorias"]);
+        llenarSubcategorias(subcategorias["requerimiento"]["subcategorias"]);
         leyendoClicksSubcategorias();    
         mostrarEstados();           
         });          
