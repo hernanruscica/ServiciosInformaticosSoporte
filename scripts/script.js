@@ -45,20 +45,18 @@ const crearNuevoSubcategoriaItem = (titulo, imagen) => {
     let $subCategoriasItem = document.createElement("div");
     let $subCategoriasImagen = document.createElement("img");
     let $subCategoriasTitulo = document.createElement("p");
-    
 
     $subCategoriasItem.classList.add("subcategoria-item");
     $subCategoriasImagen.classList.add("subcategoria-imagen");
-    $subCategoriasTitulo.classList.add("subcategoria-descripcion");
+    $subCategoriasTitulo.classList.add("subcategoria-descripcion");    
     
-
+    $subCategoriasTitulo.setAttribute("onclick", "document.getElementById('subcategoria-titulo-encabezado').scrollIntoView();");
     $subCategoriasTitulo.innerText = titulo;
     $subCategoriasImagen.setAttribute("src", imagesUrl + imagen);
 
     $subCategoriasItem.appendChild($subCategoriasImagen);  
     $subCategoriasItem.appendChild($subCategoriasTitulo);  
               
-
     return $subCategoriasItem;
     //fin de creacion de la subcategoria
 }        
@@ -101,11 +99,26 @@ const llenarSubcategorias = (subcats) => {
         if (element.id == 0) { $nuevoSubcategoriaItem.classList.add("activeSub"); }
 
         $subcategorias.appendChild($nuevoSubcategoriaItem);
-        });
-        console.log("llenando subcats");
+        });        
     }
 const llenarOfertas = (ofertas) => {
     $ofertas.innerHTML = "";
+
+    //INICIO - muestra el titulo y descripcion de una subcategoria
+    const $tituloSubcategoria = document.createElement("h3");
+    const $descripcionSubcategoria = document.createElement("p");
+
+    $tituloSubcategoria.classList.add("subcategoria-titulo-encabezado");
+    $tituloSubcategoria.setAttribute("id", "subcategoria-encabezado");
+    $tituloSubcategoria.innerHTML = subcategorias["subcategorias"][subcategoriasEstado]["titulo"];
+
+    $descripcionSubcategoria.classList.add("subcategoria-descripcion-encabezado");
+    $descripcionSubcategoria.innerHTML = subcategorias["subcategorias"][subcategoriasEstado]["descripcion"];
+    
+    $ofertas.appendChild($tituloSubcategoria);
+    $ofertas.appendChild($descripcionSubcategoria)
+    //FIN - muestra el titulo de una subcategoria
+
     ofertas.forEach(element => {
         const $nuevoOfertaItem = crearNuevoOfertaItem(element.titulo, element.descripcion, element.icono);
         $ofertas.appendChild($nuevoOfertaItem);
@@ -123,6 +136,7 @@ async function populate(){
 populate().then(() => {  
         leyendoClicksRequerimientos();                
         llenarSubcategorias(subcategorias["subcategorias"]);
-        leyendoClicksSubcategorias();              
+        leyendoClicksSubcategorias();    
+        mostrarEstados();           
         });          
     
