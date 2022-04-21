@@ -219,7 +219,62 @@
                     "id": 0,
                     "titulo": "Error en Tablet",
                     "descripcion": "Permite gestionar fallas en las partes físicas o en las aplicaciones instaladas en las tablets del organismo (por ejemplo, las utilizadas para el sistema INDI).",
-                    "icono": "url",
+                    "icono": "02.07.01",
+                    "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 7,
+        "titulo": "Mis permisos",
+        "descripcion": "Las ofertas que encontrará en esta categoría le permitirán ingresar sus incidentes relacionados a los permisos que ya posea en aplicaciones, cuentas genéricas de correo, recursos de red y para navegación. En caso de todavía no haber solicitado los permisos que requiera podrá solicitarlos o consultar por ellos en el Centro de Atención de Servicios Informáticos.",
+        "icono": "02.08.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Error de permisos en aplicación",
+                    "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes con permisos en aplicaciones del organismo, debidamente solicitados por las vías establecidas, y que no pueden emplearse correctamente. En caso de NO haber solicitado previamente los permisos en cuestión, deberá consultar el procedimiento correcto no siendo válida la presente opción.",
+                    "icono": "02.08.01",
+                    "captura": "url"
+                    },
+                    {
+                    "id": 1,
+                    "titulo": "Error de permisos en navegación, cuenta genérica de correo o recurso de red",
+                    "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes con permisos de navegación, cuentas genéricas de correo o recursos de red debidamente solicitados por las vías establecidas, y que no pueden emplearse correctamente. En caso de NO haber solicitado previamente los permisos en cuestión, deberá consultar el procedimiento correcto no siendo válida la presente opción.",
+                    "icono": "02.08.02",
+                    "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 8,
+        "titulo": "Otros",
+        "descripcion": "Esta categoría cuenta con una oferta disponible que le permitirá reportar allí únicamente las fallas que no puedan ser categorizadas en ninguna otra de las plantillas disponibles.",
+        "icono": "02.09.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Incidente generico",
+                    "descripcion": "Permite gestionar los incidentes que no puedan ser categorizados en ninguna otra de las plantillas disponibles.",
+                    "icono": "02.09.01",
+                    "captura": "url"
+                    }
+                    ]
+        },
+        {
+        "id": 9,
+        "titulo": "Seguridad informatica",
+        "descripcion": "La categoría 'Seguridad Informática' tiene como objetivo el que se reporten allí todas las páginas, programas y correos que considere contienen contenido malicioso.",
+        "icono": "02.10.00.svg",
+        "captura": "url",
+        "ofertas": [
+                    {
+                    "id": 0,
+                    "titulo": "Error al ingresar a un sitio de internet",
+                    "descripcion": "Permite reportar errores de acceso a un sitio de internet en específico.",
+                    "icono": "02.10.01",
                     "captura": "url"
                     }
                     ]

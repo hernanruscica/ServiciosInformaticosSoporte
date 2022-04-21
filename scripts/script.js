@@ -1,6 +1,6 @@
 let subcategorias; 
 let imagesUrl = "./imagenes/"    
-let requerimientosEstado = 0, subcategoriasEstado = 0;  
+let requerimientosEstado = 0, subcategoriasEstado = 1;  
 const $requerimientoItems = document.getElementsByClassName("requerimiento-item");
 const $subCategoriasItems = document.getElementsByClassName("subcategoria-item");
 const $subcategorias = document.getElementById("subcategorias");
@@ -28,13 +28,14 @@ const leyendoClicksSubcategorias = () => {
             current[0].className = current[0].className.replace(" activeSub", "");
             this.className += " activeSub";        
             });
-    }
+    }     
 }
  
 const mostrarEstados = () => {
     console.clear();
     console.log("Requerimiento: " + requerimientosEstado +"/n");
     console.log("Subcategoria: " + subcategoriasEstado +"/n");
+    llenarOfertas(subcategorias["subcategorias"][subcategoriasEstado]["ofertas"]); 
 }
 
 const crearNuevoSubcategoriaItem = (titulo, imagen) => {
@@ -104,6 +105,7 @@ const llenarSubcategorias = (subcats) => {
         console.log("llenando subcats");
     }
 const llenarOfertas = (ofertas) => {
+    $ofertas.innerHTML = "";
     ofertas.forEach(element => {
         const $nuevoOfertaItem = crearNuevoOfertaItem(element.titulo, element.descripcion, element.icono);
         $ofertas.appendChild($nuevoOfertaItem);
@@ -121,7 +123,6 @@ async function populate(){
 populate().then(() => {  
         leyendoClicksRequerimientos();                
         llenarSubcategorias(subcategorias["subcategorias"]);
-        leyendoClicksSubcategorias();
-        llenarOfertas(subcategorias["subcategorias"]["2"]["ofertas"]);        
+        leyendoClicksSubcategorias();              
         });          
     
