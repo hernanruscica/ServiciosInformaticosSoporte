@@ -1,6 +1,6 @@
 let subcategorias; 
 let imagesUrl = "./imagenes/"    
-let requerimientosEstado = 1, subcategoriasEstado = 1;  
+let requerimientosEstado = 0, subcategoriasEstado = 0;  
 
 const $d = document;
 let $requerimientos, $subcategorias, $ofertas;
@@ -17,24 +17,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-const leyendoClicksRequerimientos = () => {
+const leyendoClicksRequerimientos = (clase) => {
     //leyendo los clicks en los requerimientos    
+    const $requerimientoItems = $d.getElementsByClassName(clase);
     for (let i = 0; i < $requerimientoItems.length; i++){    
         $requerimientoItems[i].addEventListener("click", function() {   
             requerimientosEstado = i;
             mostrarEstados();            
             llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);
-            llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);
+            //llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);
             var current = document.getElementsByClassName("activeReq");        
             current[0].className = current[0].className.replace(" activeReq", "");
             this.className += " activeReq";        
             });
         }
 }
-const leyendoClicksSubcategorias = () => {
+const leyendoClicksSubcategorias = (clase) => {
     //leyendo los clicks en las subcategorias    
-    for (let i = 0; i < $subCategoriasItems.length; i++){    
-        $subCategoriasItems[i].addEventListener("click", function() {               
+    const $subcategoriasItems = $d.getElementsByClassName(clase);
+    for (let i = 0; i < $subcategoriasItems.length; i++){    
+        $subcategoriasItems[i].addEventListener("click", function() {               
             subcategoriasEstado = i;
             mostrarEstados();           
             llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas); 
@@ -68,6 +70,7 @@ const crearNuevoRequerimientoItem = (titulo, imagen) => {
     $requerimientoDescripcion.classList.add("requerimiento-descripcion");
     $requerimientoDescripcion.innerHTML = titulo;
 
+    $requerimientoItem.classList.add("requerimiento-item");
     $requerimientoItem.appendChild($requerimientoImagen);
     $requerimientoItem.appendChild($requerimientoDescripcion);
     return $requerimientoItem
@@ -128,30 +131,24 @@ const crearNuevoOfertaItem = (titulo, descripcion, icono) => {
     //fin de creacion de la subcategoria
 }        
 
-const llenarRequerimientos = (reqs) => {
-    /*crearNuevoRequerimientoItem
-    $requerimientos.innerHTML = "<h3>requerimientos</h3>";
-    console.log(reqs);*/   
+const llenarRequerimientos = (reqs) => {    
     $requerimientos.innerHTML = "";
-    reqs.forEach(element => {
-        //$requerimientos.innerHTML +=  element.titulo ;
-        const $nuevoRequerimientoItem = crearNuevoRequerimientoItem(element.titulo, element.icono);
-        $requerimientos.appendChild($nuevoRequerimientoItem);
-    })
-    /*
-    const $requerimientoItems = document.getElementsByClassName("requerimiento-item");
-    $requerimientos.innerHTML = "";
-    reqs.forEach(element => {                
-        const $nuevoRequerimientoItem = crearNuevoRequerimientoItem(element.titulo, element.icono);
-        if (element.id == 0) { $nuevoRequerimientoItem.classList.add("activeReq"); }
-
-        $requerimientos.appendChild($nuevoRequerimientoItem);
-        });     
-    leyendoClicksRequerimientos(); 
-    */   
+    reqs.forEach(element => {        
+        const $nuevoRequerimientoItem = crearNuevoRequerimientoItem(element.titulo, element.icono);        
+        if (element.id == 0) $nuevoRequerimientoItem.classList.add("activeReq");
+        $requerimientos.appendChild($nuevoRequerimientoItem);        
+    })    
     }
 
 const llenarSubcategorias = (subcats) => {
+    $subcategorias.innerHTML = "";
+    subcats.forEach(element => {        
+        const $nuevoSubcategoriasItem = crearNuevoSubcategoriaItem(element.titulo, element.icono);        
+        if (element.id == 0) $nuevoSubcategoriasItem.classList.add("activeSub");
+        $subcategorias.appendChild($nuevoSubcategoriasItem);        
+    }) 
+
+    /*
     const $subCategoriasItems = document.getElementsByClassName("subcategoria-item");
     $subcategorias.innerHTML = "";
     subcats.forEach(element => {                
@@ -159,8 +156,9 @@ const llenarSubcategorias = (subcats) => {
         if (element.id == 0) { $nuevoSubcategoriaItem.classList.add("activeSub"); }
 
         $subcategorias.appendChild($nuevoSubcategoriaItem);
-        });     
-    leyendoClicksSubcategorias();    
+        });  */   
+    leyendoClicksSubcategorias('subcategoria-item');    
+    
     }
 const llenarOfertas = (ofertas) => {
     $ofertas.innerHTML = "";
@@ -198,11 +196,12 @@ async function iniciar(){
 iniciar().then(() => {  
         
         llenarRequerimientos(todasLasOfertas.requerimientos);       
-        
-        /* 
-        llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);        
+        leyendoClicksRequerimientos('requerimiento-item');   
+        llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);   
+        leyendoClicksSubcategorias('subcategoria-item');
+            
         llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);           
-        mostrarEstados(); 
+        mostrarEstados(); /* 
         //console.log(todasLasOfertas.requerimientos[requerimientosEstado]);
         //console.log(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado]);
         console.log(todasLasOfertas.requerimientos);

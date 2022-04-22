@@ -304,6 +304,69 @@
                             ]
                 }
                 ]
+        },
+        {
+            "id": 2,
+            "titulo": "Quiero solicitat algo para...",
+            "icono": "03.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Permisos",
+                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
+                "icono": "01.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
+                                "descripcion": "Permite solicitar información.",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Me interesa conocer mas sobre...",
+            "icono": "04.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Permisos",
+                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
+                "icono": "01.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
+                                "descripcion": "Permite solicitar información.",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "titulo": "Formularios electrónicos",
+            "icono": "05.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Permisos",
+                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
+                "icono": "01.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
+                                "descripcion": "Permite solicitar información.",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
         }
         ]
     }
