@@ -312,14 +312,84 @@
             "subcategorias": 
             [{
                 "id": 0,
-                "titulo": "Permisos",
-                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
-                "icono": "01.01.00.svg",
+                "titulo": "Aplicaciones",
+                "descripcion": "En la siguiente categoría encontrará las ofertas para solicitar las modificaciones en aplicaciones que sean necesarios para que pueda realizar su trabajo.",
+                "icono": "03.01.00.svg",
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
-                                "descripcion": "Permite solicitar información.",
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 1,
+                "titulo": "La impresora o multifuncion",
+                "descripcion": "Aquí encontrará las ofertas para reportar todas las solicitudes vinculadas a configuraciones e insumos de impresión en impresoras y multifunciones del organismo.",
+                "icono": "03.02.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 2,
+                "titulo": "La telefonia fija.",
+                "descripcion": "La telefonia fija.",
+                "icono": "03.03.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 3,
+                "titulo": "Mi PC o notebook.",
+                "descripcion": "Esta categoría contiene las ofertas que le permitirán solicitar configuraciones e instalaciones dentro de su PC o Notebook del Ministerio.",
+                "icono": "03.04.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 4,
+                "titulo": "Mi usuario.",
+                "descripcion": "En “Mi usuario” podrá solicitar nuevas claves para acceso a aplicaciones, o modificaciones en datos de los perfiles que se encuentren disponibles para ser gestionados por esta vía.",
+                "icono": "03.05.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 5,
+                "titulo": "Otros.",
+                "descripcion": "Esta categoría le permitirá reportar allí únicamente las solicitudes que no puedan ser categorizadas en ninguna otra de las opciones disponibles.",
+                "icono": "03.06.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "placeholder",
+                                "descripcion": "placeholder",
                                 "icono": "01.01.01.png",
                                 "captura": "url"
                             }]

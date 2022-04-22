@@ -15,17 +15,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log($ofertas);
 });
 
-
-
 const leyendoClicksRequerimientos = (clase) => {
     //leyendo los clicks en los requerimientos    
     const $requerimientoItems = $d.getElementsByClassName(clase);
     for (let i = 0; i < $requerimientoItems.length; i++){    
         $requerimientoItems[i].addEventListener("click", function() {   
             requerimientosEstado = i;
+            subcategoriasEstado = 0;
             mostrarEstados();            
             llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);
-            //llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);
+            llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);
             var current = document.getElementsByClassName("activeReq");        
             current[0].className = current[0].className.replace(" activeReq", "");
             this.className += " activeReq";        
@@ -53,12 +52,6 @@ const mostrarEstados = () => {
     console.log("Subcategoria: " + subcategoriasEstado +"/n");
 }
 
-/*
-<div class="requerimiento-item activeReq" id="requerimiento01">
-    <img src="./imagenes/requerimientos/01.svg" alt="" class="requerimiento-imagen">
-    <p class="requerimiento-descripcion">Quiero información o realizar una consulta sobre...</p>
-</div>
-*/
 const crearNuevoRequerimientoItem = (titulo, imagen) => {
     let $requerimientoItem = document.createElement("div");
     let $requerimientoImagen = document.createElement("img"); 
@@ -87,7 +80,7 @@ const crearNuevoSubcategoriaItem = (titulo, imagen) => {
     $subCategoriasImagen.classList.add("subcategoria-imagen");
     $subCategoriasDescripcion.classList.add("subcategoria-descripcion");    
     
-    //$subCategoriasDescripcion.setAttribute("onclick", "document.getElementById('subcategoria-encabezado').scrollIntoView();");
+    $subCategoriasDescripcion.setAttribute("onclick", "document.getElementById('subcategoria-encabezado').scrollIntoView();");
     $subCategoriasDescripcion.innerText = titulo;
     $subCategoriasImagen.setAttribute("src", imagesUrl + imagen);
 
@@ -147,18 +140,7 @@ const llenarSubcategorias = (subcats) => {
         if (element.id == 0) $nuevoSubcategoriasItem.classList.add("activeSub");
         $subcategorias.appendChild($nuevoSubcategoriasItem);        
     }) 
-
-    /*
-    const $subCategoriasItems = document.getElementsByClassName("subcategoria-item");
-    $subcategorias.innerHTML = "";
-    subcats.forEach(element => {                
-        const $nuevoSubcategoriaItem = crearNuevoSubcategoriaItem(element.titulo, element.icono);
-        if (element.id == 0) { $nuevoSubcategoriaItem.classList.add("activeSub"); }
-
-        $subcategorias.appendChild($nuevoSubcategoriaItem);
-        });  */   
-    leyendoClicksSubcategorias('subcategoria-item');    
-    
+    leyendoClicksSubcategorias('subcategoria-item');       
     }
 const llenarOfertas = (ofertas) => {
     $ofertas.innerHTML = "";
@@ -193,18 +175,12 @@ async function iniciar(){
 
     todasLasOfertas = JSON.parse(todasLasOfertasText);            
     }
-iniciar().then(() => {  
-        
+iniciar().then(() => {          
         llenarRequerimientos(todasLasOfertas.requerimientos);       
         leyendoClicksRequerimientos('requerimiento-item');   
         llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);   
-        leyendoClicksSubcategorias('subcategoria-item');
-            
+        leyendoClicksSubcategorias('subcategoria-item');            
         llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);           
-        mostrarEstados(); /* 
-        //console.log(todasLasOfertas.requerimientos[requerimientosEstado]);
-        //console.log(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado]);
-        console.log(todasLasOfertas.requerimientos);
-        */
+        mostrarEstados(); 
         });          
     
