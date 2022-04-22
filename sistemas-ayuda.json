@@ -576,15 +576,15 @@
             "subcategorias": 
             [{
                 "id": 0,
-                "titulo": "Permisos",
-                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
-                "icono": "01.01.00.svg",
+                "titulo": "Conocimiento",
+                "descripcion": "Tutoriales para conocer todas las ofertas disponibles, como asi tambien autogestionar requerimientos y/o solicitudes ",
+                "icono": "04.00.00.svg",
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
-                                "descripcion": "Permite solicitar información.",
-                                "icono": "01.01.01.png",
+                                "titulo": "titulo de un tutorial",
+                                "descripcion": "descripcion de un tutorial",
+                                "icono": "04.00.00.png",
                                 "captura": "url"
                             }]
                 }
@@ -597,15 +597,15 @@
             "subcategorias": 
             [{
                 "id": 0,
-                "titulo": "Permisos",
-                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
-                "icono": "01.01.00.svg",
+                "titulo": "Formularios electrónicos",
+                "descripcion": "Enlace a la intranet de sistemas con los formularios electronicos",
+                "icono": "05.00.00.svg",
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
-                                "descripcion": "Permite solicitar información.",
-                                "icono": "01.01.01.png",
+                                "titulo": "Titulo del formulario electronico",
+                                "descripcion": "Descripcion del formulario electronico.",
+                                "icono": "05.00.00.png",
                                 "captura": "url"
                             }]
                 }
