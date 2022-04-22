@@ -4,6 +4,7 @@
         {
             "id": 0,
             "titulo": "Quiero información o realizar una consulta sobre",
+            "icono": "01.00.00.svg",
             "subcategorias": 
             [{
                 "id": 0,
@@ -22,7 +23,8 @@
             ]
         },
         {   "id" : 1,
-            "titulo": "Quiero reportar una falla en..",    
+            "titulo": "Quiero reportar una falla en..", 
+            "icono": "02.00.00.svg",   
             "subcategorias": 
                 [{
                 "id": 0,

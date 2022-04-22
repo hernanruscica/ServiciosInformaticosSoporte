@@ -2,9 +2,20 @@ let subcategorias;
 let imagesUrl = "./imagenes/"    
 let requerimientosEstado = 1, subcategoriasEstado = 1;  
 
-const $requerimientos = document.getElementById("requerimientos");
-const $subcategorias = document.getElementById("subcategorias");
-const $ofertas = document.getElementById("ofertas");
+const $d = document;
+let $requerimientos, $subcategorias, $ofertas;
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    $requerimientos = $d.getElementById("requerimientos");
+    $subcategorias = $d.getElementById("subcategorias");
+    $ofertas = $d.getElementById("ofertas");
+    console.log('DOM fully loaded and parsed');
+    console.log($requerimientos);
+    console.log($subcategorias);
+    console.log($ofertas);
+});
+
+
 
 const leyendoClicksRequerimientos = () => {
     //leyendo los clicks en los requerimientos    
@@ -118,7 +129,16 @@ const crearNuevoOfertaItem = (titulo, descripcion, icono) => {
 }        
 
 const llenarRequerimientos = (reqs) => {
-    //crearNuevoRequerimientoItem
+    /*crearNuevoRequerimientoItem
+    $requerimientos.innerHTML = "<h3>requerimientos</h3>";
+    console.log(reqs);*/   
+    $requerimientos.innerHTML = "";
+    reqs.forEach(element => {
+        //$requerimientos.innerHTML +=  element.titulo ;
+        const $nuevoRequerimientoItem = crearNuevoRequerimientoItem(element.titulo, element.icono);
+        $requerimientos.appendChild($nuevoRequerimientoItem);
+    })
+    /*
     const $requerimientoItems = document.getElementsByClassName("requerimiento-item");
     $requerimientos.innerHTML = "";
     reqs.forEach(element => {                
@@ -127,7 +147,8 @@ const llenarRequerimientos = (reqs) => {
 
         $requerimientos.appendChild($nuevoRequerimientoItem);
         });     
-    leyendoClicksRequerimientos();    
+    leyendoClicksRequerimientos(); 
+    */   
     }
 
 const llenarSubcategorias = (subcats) => {
@@ -174,14 +195,17 @@ async function iniciar(){
 
     todasLasOfertas = JSON.parse(todasLasOfertasText);            
     }
-iniciar().then(() => {      
-        llenarRequerimientos(todasLasOfertas.requerimientos);        
+iniciar().then(() => {  
+        
+        llenarRequerimientos(todasLasOfertas.requerimientos);       
+        
+        /* 
         llenarSubcategorias(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias);        
         llenarOfertas(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado].ofertas);           
         mostrarEstados(); 
         //console.log(todasLasOfertas.requerimientos[requerimientosEstado]);
         //console.log(todasLasOfertas.requerimientos[requerimientosEstado].subcategorias[subcategoriasEstado]);
         console.log(todasLasOfertas.requerimientos);
-        
+        */
         });          
     
