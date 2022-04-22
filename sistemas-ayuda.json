@@ -318,11 +318,19 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Borrado de Acumulado - PeopleNet.",
+                                "descripcion": "Requerimientos de borrado de acumulados en el sistema PeopleNet.",
+                                "icono": "03.01.01.png",
                                 "captura": "url"
-                            }]
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Modificacion en PeopleNet.",
+                                "descripcion": "Permite gestionar las solicitudes de modificación sobre PeopleNet.",
+                                "icono": "03.01.02.png",
+                                "captura": "url"
+                            }
+                        ]
                 },
                 {
                 "id": 1,
@@ -332,9 +340,9 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Cambio de insumos para equipos RICOH.",
+                                "descripcion": "Recambio de insumos o suministros de equipos RICOH.",
+                                "icono": "03.02.01.png",
                                 "captura": "url"
                             }]
                 },
@@ -346,11 +354,96 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Grupo de Captura - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de grupo de captura.",
+                                "icono": "03.03.01.png",
                                 "captura": "url"
-                            }]
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Grupo de Captura - Creación.",
+                                "descripcion": "Permite solicitar el alta del servicio de Grupo de Captura.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Grupo de Captura - Exclusión de interno.",
+                                "descripcion": "Permite excluir un interno de un Grupo de Captura existente.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Grupo de Captura - Inclusión de interno.",
+                                "descripcion": "Permite incluir un interno en un Grupo de Captura existente.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Grupo de Salto - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de Grupo de Salto.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 5,
+                                "titulo": "Grupo de Salto - Creación.",
+                                "descripcion": "Permite solicitar el alta del servicio de Grupo de Salto.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 6,
+                                "titulo": "Grupo de Salto - Exclusión de interno.",
+                                "descripcion": "Permite excluir un interno de un Grupo de Salto existente.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 7,
+                                "titulo": "Grupo de Salto - Inclusión de interno.",
+                                "descripcion": "Permite incluir un interno en un Grupo de Salto existente.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 8,
+                                "titulo": "Jefe-Asistente - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 9,
+                                "titulo": "Jefe-Asistente - Creación.",
+                                "descripcion": "Permite solicitar la creación de un nuevo Jefe - Asistente entre dos líneas telefónicas existentes del organismo.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 10,
+                                "titulo": "Jefe-Asistente - Exclusión de un Asistente",
+                                "descripcion": "Permite solicitar la exclusión de una línea telefónica que funciona como Asistente o Secretaria/o, de un servicio existente de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 11,
+                                "titulo": "Jefe-Asistente - Inclusión de un nuevo Asistente.",
+                                "descripcion": "Permite solicitar la inclusión de una nueva línea telefónica para funcionar como Asistente o Secretaria/o, en un servicio pre-existente de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 12,
+                                "titulo": "Modificar nombre del display del teléfono fijo.",
+                                "descripcion": "Permite solicitar modificación en el texto (display) que se visualiza en un teléfono fijo.",
+                                "icono": "03.03.12.png",
+                                "captura": "url"
+                            }
+                        ]
                 },
                 {
                 "id": 3,
