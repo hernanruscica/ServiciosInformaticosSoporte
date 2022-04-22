@@ -453,11 +453,47 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Configuración de cuenta de correo en PC.",
+                                "descripcion": "Permite solicitar configuraciones de correo en Microsoft Outlook.",
+                                "icono": "03.04.01.png",
                                 "captura": "url"
-                            }]
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Configuración de impresora/multifunción en PC",
+                                "descripcion": "Permite solicitar configuraciones de impresoras o multifunciones para ser utilizadas en el puesto de trabajo, y/o configuración de opciones de impresión.",
+                                "icono": "03.04.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Configuración de recurso compartido de red en PC.",
+                                "descripcion": "Permite solicitar configuraciones de recursos compartidos de red en el puesto de trabajo.",
+                                "icono": "03.04.03.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Configuraciones generales.",
+                                "descripcion": "Permite solicitar asistencia para la realización de configuraciones en su equipo.",
+                                "icono": "03.04.04.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Instalación de Google Chrome.",
+                                "descripcion": "Permite gestionar los requerimientos de instalación del navegador Google Chrome.",
+                                "icono": "03.04.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 5,
+                                "titulo": "Instalación y/o Configuración de scanner en PC.",
+                                "descripcion": "Permite gestionar los requerimientos de instalaciones y/o configuraciones de scanner para ser utilizadas en el puesto de trabajo.",
+                                "icono": "03.04.06.png",
+                                "captura": "url"
+                            }
+                        ]
                 },
                 {
                 "id": 4,
@@ -467,11 +503,40 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Forzado de contraseña para usuario del sistema ANSES.",
+                                "descripcion": "Permite gestionar solicitudes de nuevas contraseñas exclusivamente en el sistema ANSES.",
+                                "icono": "03.05.01.png",
                                 "captura": "url"
-                            }]
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Forzado de contraseña para usuario del sistema INDI.",
+                                "descripcion": "Permite gestionar las solicitudes de forzado de contraseña para usuarios del sistema INDI.",
+                                "icono": "03.05.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Forzado de contraseña para usuario del sistema Mesa de Entradas",
+                                "descripcion": "Permite gestionar solicitudes de nuevas contraseñas exclusivamente en el sistema Mesa de Entradas.",
+                                "icono": "03.05.03.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Modificación de correo electrónico.",
+                                "descripcion": "Permite gestionar solicitudes de modificación de la casilla de correo asociada a un usuario, en los sistemas informáticos que hacen uso de Identidades como método de acceso. Por ejemplo, Portal Abogados, Portal Empleo, etc.",
+                                "icono": "03.05.04.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Modificación de sello en GDE",
+                                "descripcion": "Permite gestionar las modificaciones de sello en GDE que se corresponden con la asignación o desasignación.",
+                                "icono": "03.05.05.png",
+                                "captura": "url"
+                            }
+                        ]
                 },
                 {
                 "id": 5,
@@ -481,11 +546,26 @@
                 "captura": "url",
                 "ofertas": [{
                                 "id": 0,
-                                "titulo": "placeholder",
-                                "descripcion": "placeholder",
-                                "icono": "01.01.01.png",
+                                "titulo": "Descarga de Archivos de Organismo Externo",
+                                "descripcion": "Permite solicitar descarga de archivos provenientes de organismos externos (por ej. AFIP).",
+                                "icono": "03.06.01.png",
                                 "captura": "url"
-                            }]
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Resguardo de Información de Base de Datos para el proceso Acreditacion de Empleo",
+                                "descripcion": "Permite solicitar los Backup por Snapshot (también denominado Resguardo de información) de la base de datos correspondiente al proceso de Acreditación Empleo.",
+                                "icono": "03.06.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Solicitud genérica",
+                                "descripcion": "Permite gestionar las solicitudes que no puedan ser categorizadas en ninguna otra de las plantillas disponibles.",
+                                "icono": "03.06.03.png",
+                                "captura": "url"
+                            }
+                        ]
                 }
             ]
         },
