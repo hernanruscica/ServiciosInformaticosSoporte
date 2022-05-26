@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+.form{
+    display: flex;
+    flex-direction: column;    
+}
+.entrada{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0em;
+    padding: 0.6em;    
+    border-radius: 5px;
+    border: solid #333 1px;
+    background-color: azure;
+}
+.entrada label {    
+    width: 20%;    
+}
+
+.entrada input {
+    width: 80%;
+    border-radius: 5px;
+    padding: 0.6em 0.2em;
+}
+
+.btn{
+    cursor: pointer;
+    margin: 1em 0em;
+    padding: 0.6em; 
+}
+
+.enlaceFormatoHTML{
+    background-color: black;
+    color: greenyellow;
+    padding: 1em;
+    font-size: 1.2em;
+    resize:none;
+    line-height: 1.5em;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
