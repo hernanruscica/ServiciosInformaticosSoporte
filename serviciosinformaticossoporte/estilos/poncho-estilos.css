@@ -1,0 +1,184 @@
+/*
+font-family: 'Encode Sans', sans-serif;
+*/
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+}
+.hero-image{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../01.Requerimientos/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-image_content{
+    text-align: center;
+}
+
+.hero-image_content_titulo{
+    margin-bottom: 0.5em;
+}
+.hero-image_content_titulo a{
+    text-decoration: none;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 0.8em;    
+}
+
+.hero-image_content_input{
+    font-size: 1.2em;
+    padding: 0.6em 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #ddd;
+}
+
+.hero-image_content_input:focus{
+    background-color: #FFF;
+   
+}
+
+.container{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+}
+
+.requerimientos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 1px grey;
+}
+
+.requerimiento-item {
+    border: solid 1px grey;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.requerimiento-item:hover{
+    border: solid thin grey;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+ .activeReq{
+    background-color: #0072bb;
+    color: #ddd;
+}
+
+.activeReq:hover{
+    background-color: #42aaeb;
+    color: #ddd;
+}
+
+.requerimiento-imagen{
+    width: 70px;
+    height: auto;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    /*border: solid 1px grey;*/
+    padding-top: 1em;
+}
+
+.subcategorias{
+    /*border: solid 1px grey;*/
+    padding: 0em;
+    width: 30%;
+}
+/*color de seleccion activa #0072bb
+    border-radius: 30px;*/
+.subcategoria-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8em 1em 0.8em 1em;
+    border-radius: 30px;
+}
+.subcategoria-item:hover{
+    
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.activeSub{
+    background-color: #0072bb;
+    color: #ddd;
+}
+
+.activeSub:hover{
+    background-color: #42aaeb;
+    color: #ddd;
+}
+
+.subcategoria-imagen{
+    width: 36px;
+    height: auto;
+}
+
+.subcategoria-descripcion{
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+.ofertas {
+    /*border: solid 1px grey;*/
+    padding: 0em 0.8em;
+    width: 68%;
+}
+
+.oferta-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8em 0.4em 0.8em 1em;
+    border: solid 1px #ddd;
+    margin-bottom: 00.6em;
+    border-radius: 10px;
+    color: #333;    
+    transition-duration: 0.3s;    
+}
+
+.oferta-item:hover{
+    cursor: pointer;
+    background-color: #f3faff;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.oferta-imagen{
+    width: 50px;
+    height: auto;
+}
+
+.oferta-textos{
+    padding: 0.5em 1em;
+}
+
+.oferta-titulo{
+    font-size: 1em;
+    margin-bottom: 0.6em;
+}
+
+.oferta-descripcion{
+    font-size: 0.9em;
+}

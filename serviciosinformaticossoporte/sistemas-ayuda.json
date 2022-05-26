@@ -1,0 +1,615 @@
+    
+    {
+    "requerimientos": [
+        {
+            "id": 0,
+            "titulo": "Quiero información o realizar una consulta sobre",
+            "icono": "01.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Permisos",
+                "descripcion": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos? Permite solicitar información. ",
+                "icono": "01.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "¿Cómo solicitar altas, bajas, forzados de clave o modificaciones de permisos?",
+                                "descripcion": "Permite solicitar información.",
+                                "icono": "01.01.01.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
+        },
+        {   "id" : 1,
+            "titulo": "Quiero reportar una falla en..", 
+            "icono": "02.00.00.svg",   
+            "subcategorias": 
+                [{
+                "id": 0,
+                "titulo": "Acceso a mi equipo desde fuera del organismo",
+                "descripcion": "La siguiente categoría contiene ofertas para reportar cualquier tipo de falla que no permita la conexión remota con su equipo ubicado físicamente en el organismo, o errores en la conexión vía VPN. (Incluye el tratamiento de incidentes por equipos apagados).",
+                "icono": "02.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Error de conectividad a través de VPN o Escritorio Remoto",
+                                "descripcion": "Error de conexión a los equipos del ministerio, o errores en la conexión vía VPN.",
+                                "icono": "02.01.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {        
+                "id": 1,
+                "titulo": "Uso o Acceso a las aplicaciones",
+                "descripcion": "En esta categoría encontrará ofertas donde podrá reportar fallas relacionadas a aplicaciones o cualquier evento que no forme parte del funcionamiento habitual de estas aplicaciones incluyendo errores de acceso, de uso o lentitud.",
+                "icono": "02.02.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                                "id": 0,
+                                "titulo": "Error al acceder a una aplicación",
+                                "descripcion": "Permite reportar inconvenientes en el acceso a aplicaciones.",
+                                "icono": "02.02.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Error al utilizar el DatawareHouse",
+                                "descripcion": "Permite reportar inconvenientes en la explotación de datos con Excel Services",
+                                "icono": "02.02.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Error al Utilizar INDI",
+                                "descripcion": "Permite gestionar inconvenientes con la utilización del sistema INDI.",
+                                "icono": "02.02.03.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Error al utilizar Liquidación Empleo",
+                                "descripcion": "Permite gestionar los inconvenientes en el uso de la aplicación de Liquidación Empleo.",
+                                "icono": "02.02.04.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Error al utilizar PeopleNet",
+                                "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de PeopleNet.",
+                                "icono": "02.02.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 5,
+                                "titulo": "Error al utilizar PNRT",
+                                "descripcion": "Permite gestionar inconvenientes con la utilización del sistema PNRT.",
+                                "icono": "02.02.06.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 6,
+                                "titulo": "Error al utilizar Repro 2",
+                                "descripcion": "Permite gestionar inconvenientes y errores en la utilización del sistema REPRO 2.",
+                                "icono": "02.02.07.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id":7,
+                                "titulo": "Error al utilizar una aplicación",
+                                "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de aplicaciones, luego de haber accedido a las mismas. Si, en cambio, no logró acceder a la aplicación, deberá emplear la plantilla 'Error al acceder a una aplicación'",
+                                "icono": "02.02.08.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 8,
+                                "titulo": "lentitud al utilizar una aplicación",
+                                "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de LENTITUD en el uso de aplicaciones, luego de haber accedido a las mismas.",
+                                "icono": "02.02.09.png",
+                                "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 2,
+                "titulo": "La conectividad de mi equipo, dispositivo, o dependencia (dentro del organismo)",
+                "descripcion": "Aquí es donde encontrará las ofertas para reportar las fallas que estén relacionadas a la conectividad de su equipo con la red del Ministerio cuando se encuentre trabajando físicamente dentro del organismo.Esta categoría aplica tanto para inconvenientes en PC’s de escritorio, como también para Notebooks del organismo y dispositivos móviles que presenten inconvenientes al conectarse a dicha red inalámbrica.",
+                "icono": "02.03.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                                "id": 0,
+                                "titulo": "Error de conectividad a la red",
+                                "descripcion": "Permite gestionar los incidentes vinculados a errores de conectividad a la red de datos del organismo, en una PC o Notebook determinada.",
+                                "icono": "02.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Error de conectividad inalámbrica - Wifi",
+                                "descripcion": "Errores en la conectividad interna del ministerio mediante redes inalámbricas (WiFi) tanto en PC's/Notebooks como en dispositivos móviles.",
+                                "icono": "02.03.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Error o lentitud en enlace del interior del país",
+                                "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en los enlaces de red de dependencias ubicadas en el interior del país. Es importante señalar que esta opción no es válida para los inconvenientes propios de una PC (para ellos, se debe utilizar la opción 'Error de conectividad a la red o navegación en PC'), sino que aplica para los inconvenientes de conectividad (tanto por caída de la red como por lentitud) que afectan a la totalidad de la dependencia.",
+                                "icono": "02.03.03.png",
+                                "captura": "url"
+                            }
+                            ]   
+                },
+                {
+                "id": 3,
+                "titulo": "La impresora o Multifunción",
+                "descripcion": "Esta categoría le permitirá encontrar las ofertas para reportar todas las fallas vinculadas a errores de impresión en impresoras y multifunciones del organismo.",
+                "icono": "02.04.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                                "id": 0,
+                                "titulo": "Error de impresión - Impresora",
+                                "descripcion": "Permite gestionar los incidentes vinculados a errores de impresión en impresoras y multifunciones.",
+                                "icono": "02.04.01.png",
+                                "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 4,
+                "titulo": "La telefonía fija",
+                "descripcion": "Permite gestionar a través de sus ofertas los incidentes vinculados a errores que afecten los dispositivos de telefonía fija",
+                "icono": "02.05.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Error en la telefonía fija",
+                            "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten los dispositivos de telefonía fija (IP). Se aplica tanto para fallas de funcionamiento, cables, etc., como para inconvenientes de conectividad.",
+                            "icono": "02.05.01.png",
+                            "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 5,
+                "titulo": "Mi pc o Notebook",
+                "descripcion": "Mediante las ofertas ligadas a esta categoría deberá reportar todas las fallas que afecten el funcionamiento de su Pc o Notebook o los  programas instalados en ella.",
+                "icono": "02.06.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Error al ingresar a un sitio de internet",
+                            "descripcion": "Permite reportar errores de acceso a un sitio de internet en específico.",
+                            "icono": "02.06.01.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 1,
+                            "titulo": "Error al utilizar software instalado en PC",
+                            "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes en el uso de software instalado en la PC. Por ejemplo: Errores en paquete Office (Word, Excel, Outlook, etc.), Adobe, Navegadores de internet, etc.",
+                            "icono": "02.06.02.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 2,
+                            "titulo": "Error de Outlook - Correo electrónico",
+                            "descripcion": "Permite gestionar los incidentes relacionados al correo electrónico institucional, incluyendo aquéllos que afecten al programa Outlook.",
+                            "icono": "02.06.03.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 3,
+                            "titulo": "Error en monitor",
+                            "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten al monitor de una PC. Se aplica tanto para fallas de funcionamiento, como para inconvenientes de conectividad.",
+                            "icono": "02.06.04.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 4,
+                            "titulo": "Falla en teclado o mouse",
+                            "descripcion": "Permite gestionar fallas en teclado y mouse conectados a equipos del organismo. Aplica tanto para inconvenientes de funcionamiento como de conectividad.",
+                            "icono": "02.06.05.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 5,
+                            "titulo": "Lentitud al utilizar una PC o Notebook",
+                            "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes de lentitud en el uso de una PC o Notebook.",
+                            "icono": "02.06.06.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 6,
+                            "titulo": "Pc - Notebook no enciende o no inicia",
+                            "descripcion": "Permite gestionar los incidentes vinculados a errores que afecten el encendido o inicio de una PC o Notebook y que, por lo tanto, impiden completamente su uso.",
+                            "icono": "02.06.07.png",
+                            "captura": "url"
+                            }
+                            ]
+                },    
+                {
+                "id": 6,
+                "titulo": "Mi tablet o celular",
+                "descripcion": "Mi Tablet o celular",
+                "icono": "02.07.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Error en Tablet",
+                            "descripcion": "Permite gestionar fallas en las partes físicas o en las aplicaciones instaladas en las tablets del organismo (por ejemplo, las utilizadas para el sistema INDI).",
+                            "icono": "02.07.01.png",
+                            "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 7,
+                "titulo": "Mis permisos",
+                "descripcion": "Las ofertas que encontrará en esta categoría le permitirán ingresar sus incidentes relacionados a los permisos que ya posea en aplicaciones, cuentas genéricas de correo, recursos de red y para navegación. En caso de todavía no haber solicitado los permisos que requiera podrá solicitarlos o consultar por ellos en el Centro de Atención de Servicios Informáticos.",
+                "icono": "02.08.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Error de permisos en aplicación",
+                            "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes con permisos en aplicaciones del organismo, debidamente solicitados por las vías establecidas, y que no pueden emplearse correctamente. En caso de NO haber solicitado previamente los permisos en cuestión, deberá consultar el procedimiento correcto no siendo válida la presente opción.",
+                            "icono": "02.08.01.png",
+                            "captura": "url"
+                            },
+                            {
+                            "id": 1,
+                            "titulo": "Error de permisos en navegación, cuenta genérica de correo o recurso de red",
+                            "descripcion": "Permite gestionar los incidentes vinculados a inconvenientes con permisos de navegación, cuentas genéricas de correo o recursos de red debidamente solicitados por las vías establecidas, y que no pueden emplearse correctamente. En caso de NO haber solicitado previamente los permisos en cuestión, deberá consultar el procedimiento correcto no siendo válida la presente opción.",
+                            "icono": "02.08.02.png",
+                            "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 8,
+                "titulo": "Otros",
+                "descripcion": "Esta categoría cuenta con una oferta disponible que le permitirá reportar allí únicamente las fallas que no puedan ser categorizadas en ninguna otra de las plantillas disponibles.",
+                "icono": "02.09.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Incidente generico",
+                            "descripcion": "Permite gestionar los incidentes que no puedan ser categorizados en ninguna otra de las plantillas disponibles.",
+                            "icono": "02.09.01.png",
+                            "captura": "url"
+                            }
+                            ]
+                },
+                {
+                "id": 9,
+                "titulo": "Seguridad informatica",
+                "descripcion": "La categoría 'Seguridad Informática' tiene como objetivo el que se reporten allí todas las páginas, programas y correos que considere contienen contenido malicioso.",
+                "icono": "02.10.00.svg",
+                "captura": "url",
+                "ofertas": [
+                            {
+                            "id": 0,
+                            "titulo": "Error al ingresar a un sitio de internet",
+                            "descripcion": "Permite reportar errores de acceso a un sitio de internet en específico.",
+                            "icono": "02.10.01.png",
+                            "captura": "url"
+                            }
+                            ]
+                }
+                ]
+        },
+        {
+            "id": 2,
+            "titulo": "Quiero solicitat algo para...",
+            "icono": "03.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Aplicaciones",
+                "descripcion": "En la siguiente categoría encontrará las ofertas para solicitar las modificaciones en aplicaciones que sean necesarios para que pueda realizar su trabajo.",
+                "icono": "03.01.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Borrado de Acumulado - PeopleNet.",
+                                "descripcion": "Requerimientos de borrado de acumulados en el sistema PeopleNet.",
+                                "icono": "03.01.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Modificacion en PeopleNet.",
+                                "descripcion": "Permite gestionar las solicitudes de modificación sobre PeopleNet.",
+                                "icono": "03.01.02.png",
+                                "captura": "url"
+                            }
+                        ]
+                },
+                {
+                "id": 1,
+                "titulo": "La impresora o multifuncion",
+                "descripcion": "Aquí encontrará las ofertas para reportar todas las solicitudes vinculadas a configuraciones e insumos de impresión en impresoras y multifunciones del organismo.",
+                "icono": "03.02.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Cambio de insumos para equipos RICOH.",
+                                "descripcion": "Recambio de insumos o suministros de equipos RICOH.",
+                                "icono": "03.02.01.png",
+                                "captura": "url"
+                            }]
+                },
+                {
+                "id": 2,
+                "titulo": "La telefonia fija.",
+                "descripcion": "La telefonia fija.",
+                "icono": "03.03.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Grupo de Captura - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de grupo de captura.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Grupo de Captura - Creación.",
+                                "descripcion": "Permite solicitar el alta del servicio de Grupo de Captura.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Grupo de Captura - Exclusión de interno.",
+                                "descripcion": "Permite excluir un interno de un Grupo de Captura existente.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Grupo de Captura - Inclusión de interno.",
+                                "descripcion": "Permite incluir un interno en un Grupo de Captura existente.",
+                                "icono": "03.03.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Grupo de Salto - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de Grupo de Salto.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 5,
+                                "titulo": "Grupo de Salto - Creación.",
+                                "descripcion": "Permite solicitar el alta del servicio de Grupo de Salto.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 6,
+                                "titulo": "Grupo de Salto - Exclusión de interno.",
+                                "descripcion": "Permite excluir un interno de un Grupo de Salto existente.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 7,
+                                "titulo": "Grupo de Salto - Inclusión de interno.",
+                                "descripcion": "Permite incluir un interno en un Grupo de Salto existente.",
+                                "icono": "03.03.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 8,
+                                "titulo": "Jefe-Asistente - Baja.",
+                                "descripcion": "Permite solicitar la baja del servicio de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 9,
+                                "titulo": "Jefe-Asistente - Creación.",
+                                "descripcion": "Permite solicitar la creación de un nuevo Jefe - Asistente entre dos líneas telefónicas existentes del organismo.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 10,
+                                "titulo": "Jefe-Asistente - Exclusión de un Asistente",
+                                "descripcion": "Permite solicitar la exclusión de una línea telefónica que funciona como Asistente o Secretaria/o, de un servicio existente de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 11,
+                                "titulo": "Jefe-Asistente - Inclusión de un nuevo Asistente.",
+                                "descripcion": "Permite solicitar la inclusión de una nueva línea telefónica para funcionar como Asistente o Secretaria/o, en un servicio pre-existente de Jefe - Asistente.",
+                                "icono": "03.03.09.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 12,
+                                "titulo": "Modificar nombre del display del teléfono fijo.",
+                                "descripcion": "Permite solicitar modificación en el texto (display) que se visualiza en un teléfono fijo.",
+                                "icono": "03.03.12.png",
+                                "captura": "url"
+                            }
+                        ]
+                },
+                {
+                "id": 3,
+                "titulo": "Mi PC o notebook.",
+                "descripcion": "Esta categoría contiene las ofertas que le permitirán solicitar configuraciones e instalaciones dentro de su PC o Notebook del Ministerio.",
+                "icono": "03.04.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Configuración de cuenta de correo en PC.",
+                                "descripcion": "Permite solicitar configuraciones de correo en Microsoft Outlook.",
+                                "icono": "03.04.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Configuración de impresora/multifunción en PC",
+                                "descripcion": "Permite solicitar configuraciones de impresoras o multifunciones para ser utilizadas en el puesto de trabajo, y/o configuración de opciones de impresión.",
+                                "icono": "03.04.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Configuración de recurso compartido de red en PC.",
+                                "descripcion": "Permite solicitar configuraciones de recursos compartidos de red en el puesto de trabajo.",
+                                "icono": "03.04.03.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Configuraciones generales.",
+                                "descripcion": "Permite solicitar asistencia para la realización de configuraciones en su equipo.",
+                                "icono": "03.04.04.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Instalación de Google Chrome.",
+                                "descripcion": "Permite gestionar los requerimientos de instalación del navegador Google Chrome.",
+                                "icono": "03.04.05.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 5,
+                                "titulo": "Instalación y/o Configuración de scanner en PC.",
+                                "descripcion": "Permite gestionar los requerimientos de instalaciones y/o configuraciones de scanner para ser utilizadas en el puesto de trabajo.",
+                                "icono": "03.04.06.png",
+                                "captura": "url"
+                            }
+                        ]
+                },
+                {
+                "id": 4,
+                "titulo": "Mi usuario.",
+                "descripcion": "En “Mi usuario” podrá solicitar nuevas claves para acceso a aplicaciones, o modificaciones en datos de los perfiles que se encuentren disponibles para ser gestionados por esta vía.",
+                "icono": "03.05.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Forzado de contraseña para usuario del sistema ANSES.",
+                                "descripcion": "Permite gestionar solicitudes de nuevas contraseñas exclusivamente en el sistema ANSES.",
+                                "icono": "03.05.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Forzado de contraseña para usuario del sistema INDI.",
+                                "descripcion": "Permite gestionar las solicitudes de forzado de contraseña para usuarios del sistema INDI.",
+                                "icono": "03.05.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Forzado de contraseña para usuario del sistema Mesa de Entradas",
+                                "descripcion": "Permite gestionar solicitudes de nuevas contraseñas exclusivamente en el sistema Mesa de Entradas.",
+                                "icono": "03.05.03.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 3,
+                                "titulo": "Modificación de correo electrónico.",
+                                "descripcion": "Permite gestionar solicitudes de modificación de la casilla de correo asociada a un usuario, en los sistemas informáticos que hacen uso de Identidades como método de acceso. Por ejemplo, Portal Abogados, Portal Empleo, etc.",
+                                "icono": "03.05.04.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 4,
+                                "titulo": "Modificación de sello en GDE",
+                                "descripcion": "Permite gestionar las modificaciones de sello en GDE que se corresponden con la asignación o desasignación.",
+                                "icono": "03.05.05.png",
+                                "captura": "url"
+                            }
+                        ]
+                },
+                {
+                "id": 5,
+                "titulo": "Otros.",
+                "descripcion": "Esta categoría le permitirá reportar allí únicamente las solicitudes que no puedan ser categorizadas en ninguna otra de las opciones disponibles.",
+                "icono": "03.06.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Descarga de Archivos de Organismo Externo",
+                                "descripcion": "Permite solicitar descarga de archivos provenientes de organismos externos (por ej. AFIP).",
+                                "icono": "03.06.01.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 1,
+                                "titulo": "Resguardo de Información de Base de Datos para el proceso Acreditacion de Empleo",
+                                "descripcion": "Permite solicitar los Backup por Snapshot (también denominado Resguardo de información) de la base de datos correspondiente al proceso de Acreditación Empleo.",
+                                "icono": "03.06.02.png",
+                                "captura": "url"
+                            },
+                            {
+                                "id": 2,
+                                "titulo": "Solicitud genérica",
+                                "descripcion": "Permite gestionar las solicitudes que no puedan ser categorizadas en ninguna otra de las plantillas disponibles.",
+                                "icono": "03.06.03.png",
+                                "captura": "url"
+                            }
+                        ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Me interesa conocer mas sobre...",
+            "icono": "04.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Conocimiento",
+                "descripcion": "Tutoriales para conocer todas las ofertas disponibles, como asi tambien autogestionar requerimientos y/o solicitudes ",
+                "icono": "04.00.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "titulo de un tutorial",
+                                "descripcion": "descripcion de un tutorial",
+                                "icono": "04.00.00.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "titulo": "Formularios electrónicos",
+            "icono": "05.00.00.svg",
+            "subcategorias": 
+            [{
+                "id": 0,
+                "titulo": "Formularios electrónicos",
+                "descripcion": "Enlace a la intranet de sistemas con los formularios electronicos",
+                "icono": "05.00.00.svg",
+                "captura": "url",
+                "ofertas": [{
+                                "id": 0,
+                                "titulo": "Titulo del formulario electronico",
+                                "descripcion": "Descripcion del formulario electronico.",
+                                "icono": "05.00.00.png",
+                                "captura": "url"
+                            }]
+                }
+            ]
+        }
+        ]
+    }
