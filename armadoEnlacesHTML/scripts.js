@@ -48,6 +48,7 @@
         const $a = document.createElement("a");  
         const $tituloVistaPrevia = document.createElement('h3');
         $tituloVistaPrevia.innerHTML = 'Vista Previa del enlace:'  
+        $tituloVistaPrevia.classList.add('titulos_sueltos')
 
         const $enlace = document.getElementById(enlaceId);        
 
@@ -91,6 +92,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperior
         $btnEnlace.innerHTML = "COPIAR";
         $btnEnlace.classList.add('btn');
         $fragment.appendChild($btnEnlace);
+
+        const $labelCopiado = document.createElement('label');
+        $labelCopiado.classList.add('label_copiado');        
+        $labelCopiado.classList.add('oculto');
+        $labelCopiado.innerHTML = "COPIADO ...";
+        $fragment.appendChild($labelCopiado);
         
         $enlaceFormatoHTMLid.innerHTML = '';
         $enlaceFormatoHTMLid.appendChild($fragment);
@@ -111,7 +118,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperior
             .catch(err => {
             console.log('Something went wrong', err);
         })
-     
+        mostrarMensaje('label_copiado');
+        setTimeout(() => ocultarMensaje('label_copiado'), 2000);
     }   
 
  function seleccionarTodoTexto(inputId){
@@ -119,4 +127,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperior
     $input.select();    
  }
 
- 
+ function ocultarMensaje(labelCopiadoClass){     
+     let $labelCopiado = document.querySelector('.' + labelCopiadoClass);     
+     $labelCopiado.classList.add('oculto');
+ }
+
+ function mostrarMensaje(labelCopiadoClass){     
+    let $labelCopiado = document.querySelector('.' + labelCopiadoClass);     
+    $labelCopiado.classList.remove('oculto');
+    $labelCopiado.classList.add('titulos_sueltos');
+}

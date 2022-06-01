@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
 } 
-
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 .form{
     display: flex;
     flex-direction: column;    
@@ -17,7 +19,10 @@
     padding: 0.6em;    
     border-radius: 5px;
     border: solid #333 1px;
-    background-color: azure;
+    background-color: #3BACB6;    
+    color : #cde9e7;
+    font-weight: 700;
+    border: none;
 }
 .entrada label {    
     width: 20%;    
@@ -26,37 +31,42 @@
 .entrada__input {
     width: 80%;
     border-radius: 5px;
-    padding: 0.6em 0.2em;
+    padding: 0.6em 0.2em;    
 }
 
 .entrada__input:focus {
     font-weight:700;
-    border: blue solid 3px;
+    border: #3BACB6 solid 4px;
+    background-color: #B3E8E5;    
   }
 
 .btn{
     cursor: pointer;
     margin: 1em 0em;
-    padding: 0.6em; 
+    padding: 1em; 
     text-transform: uppercase;
     box-shadow: 6px 6px 7px 0px rgba(0,0,0,0.2);
     border-radius: 5px;
-    background-color: rgb(75, 102, 221);
-    color: #DDD;
+    background-color: #82DBD8;    
+    border: 1px solid #333;
+    color: #333;
     font-weight: 700;
 }
 
 .btn:hover{
     transform: scale(1.06);    
+    background-color: #B3E8E5;
     transition: all 0.08s ease-out;
 }
 .enlaceFormatoHTML{
-    background-color: black;
-    color: greenyellow;
+    background-color: rgb(68, 68, 68);
+    color: #B3E8E5;
     padding: 1em;
     font-size: 1.2em;
     resize:none;
     line-height: 1.5em;
+    border-radius: 5px;
+    border: #2F8F9D thick solid;
 }
 
 .contenedor {
@@ -66,3 +76,21 @@
     padding: 1em;
 }
 
+.label_copiado{
+    margin: 1em;
+    font-weight: 600;        
+    /*
+    transition: all 1.0s ease-out;
+    */
+}
+
+.oculto{
+    opacity: 0;       
+    transform: scale(0.4); 
+    transition: all 1.0s ease-out;
+}
+
+.titulos_sueltos{
+    color: #2F8F9D;
+    margin-bottom: 1em;
+}
