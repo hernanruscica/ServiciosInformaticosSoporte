@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
     margin: 0.5em 0em;
     padding: 0.6em;    
     border-radius: 5px;
@@ -22,18 +23,33 @@
     width: 20%;    
 }
 
-.entrada input {
+.entrada__input {
     width: 80%;
     border-radius: 5px;
     padding: 0.6em 0.2em;
 }
 
+.entrada__input:focus {
+    font-weight:700;
+    border: blue solid 3px;
+  }
+
 .btn{
     cursor: pointer;
     margin: 1em 0em;
     padding: 0.6em; 
+    text-transform: uppercase;
+    box-shadow: 6px 6px 7px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: rgb(75, 102, 221);
+    color: #DDD;
+    font-weight: 700;
 }
 
+.btn:hover{
+    transform: scale(1.06);    
+    transition: all 0.08s ease-out;
+}
 .enlaceFormatoHTML{
     background-color: black;
     color: greenyellow;
@@ -45,7 +61,7 @@
 
 .contenedor {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 1em;
 }

@@ -88,7 +88,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperior
         //<button id="btn" onclick="copyToClickBoard()">Copy</button>
         const $btnEnlace = document.createElement('button');
         $btnEnlace.setAttribute('onclick', 'copyToClickBoard()')
-        $btnEnlace.innerHTML = "Copiar";
+        $btnEnlace.innerHTML = "COPIAR";
+        $btnEnlace.classList.add('btn');
         $fragment.appendChild($btnEnlace);
         
         $enlaceFormatoHTMLid.innerHTML = '';
@@ -113,3 +114,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperior
      
     }   
 
+ function seleccionarTodoTexto(inputId){
+    $input = document.getElementById(inputId);    
+    $input.select();    
+ }
+
+ 

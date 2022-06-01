@@ -11,18 +11,20 @@
     <form action="" class = "contenedor">
         <div class="entrada">
             <label for="inputUrl">URL</label>
-            <input type="text" name="" id="inputUrl" placeholder="Ingrese la url del enlace">
+            <input type="text" name="" id="inputUrl" placeholder="Ingrese la url del enlace" 
+                onclick="seleccionarTodoTexto('inputUrl')" class="entrada__input">
         </div>
         <div class="entrada">
             <label for="inputTitulo">Titulo</label>
-            <input type="text" name="" id="inputTitulo" placeholder="Ingrese el titulo del enlace">
+            <input type="text" name="" id="inputTitulo" placeholder="Ingrese el titulo del enlace" 
+                onclick="seleccionarTodoTexto('inputTitulo')" class="entrada__input">
         </div>
         <input type="button" value="Generar HTML" class="btn"
-        onclick="getVariables('inputUrl', 'inputTitulo')">
+            onclick="getVariables('inputUrl', 'inputTitulo')">
     </form>
   
     
-    <div id="enlace" class="contenedor">           
+    <div id="enlace" class="contenedor">            
         <!--
         <a href="" target="_blank"></a>     
         -->        
