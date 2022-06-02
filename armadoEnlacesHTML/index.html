@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <div class="contenedor">
+        <h1 class="titulos_sueltos">Armador de Enlaces HTML</h1>
+        <p class="titulos_sueltos">Aplicacion web que arma una etiqueta <b>&lt;a&gt</b>, con los atributos <b>href</b> y <b>target=_'blank'</b></p>
+    </div>    
     <form action="" class = "contenedor">
         <div class="entrada">
             <label for="inputUrl">URL</label>
@@ -31,20 +35,18 @@
     
     <div id="enlace" class="contenedor">            
         <!--
+        <h3 class="titulos_sueltos">Vista previa del enlace</h3>
         <a href="" target="_blank"></a>     
         -->        
     </div>
     <div id="enlaceFormatoHTML" class="contenedor">
-        <!--
-        <pre>
-            <code>
-                <a href = 'https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/35#/' target = '_blank'>¿Cómo solicitar más espacio en casilla de Outlook ?</a>
-            </code>
-        </pre>
-               
+        <!--        
         <textarea name="" id="" rows="5" disabled = "true" class = "contenedor enlaceFormatoHTML">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperiores fugit praesentium quo ipsa, a porro quibusdam hic sed, vel nisi qui. Tenetur aliquam assumenda natus autem quod odit?
-        </textarea>-->
+        </textarea>
+        <button onclick="copyToClickBoard()" class="btn">COPIAR</button>
+        <label class="label_copiado oculto">COPIADO ...</label><label class="label_copiado oculto">COPIADO ...</label>
+        -->
     </div>
     <script src="scripts.js"></script>
 </body>
