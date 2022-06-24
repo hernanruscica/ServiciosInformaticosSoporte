@@ -47,3 +47,9 @@ body{
 .paso_texto * {
     margin-bottom: 1em;
 }
+
+@media (max-width: 550px){
+    .paso {
+        flex-direction: column;
+    }
+}
