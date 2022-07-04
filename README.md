@@ -8,3 +8,8 @@
 
 <h1>Seccion con instructivos utiles en el ministerio de trabajo</h1>
 <a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/instructivos/'>Ir a "Instructivos"</a> </p>
+
+<h1>formulario validado</h1>
+<a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/GestionServiciosRed-ConJscript/'>Ir a "Formularios validados"</a> </p>
+
+
