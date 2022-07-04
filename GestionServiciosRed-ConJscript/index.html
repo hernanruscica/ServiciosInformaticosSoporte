@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuarios de red</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body> 
+    <form action="#" method="post" class="form" id="form">        
+        <div class="form__cabecera column">
+            <div>
+                <img src="./imgs/ministerioTrabajoLogo.png" alt="logo ministerio de trabajo">
+            </div>
+            <div>
+                <h3>Dirección General de Informática e Innovación Tecnológica</h3>
+            </div>
+            <div>
+                <h4>Formulario de "Gestion de Usuarios de Red"</h4>
+            </div>
+        </div>
+        <fieldset>
+            <legend>Información del Usuario</legend>
+            <section class="form_layout">
+                <div class="input_item">
+                    <label for="apellido">Apellido/s:</label>                
+                    <input type="text" name="apellido" title = "No puede estar vacio, no admite caracteres especiales, ni numeros." 
+                        placeholder="Ingrese su/s apellido/s" id="apellido" required pattern = "/^[a-zA-ZÀ-ÿ\s]{1,40}$/" >
+                    <label for="apellido" class="hide-msg"></label>
+                </div>
+                <div class="input_item">
+                    <label for="nombres">Nombres:</label>                
+                    <input type="text" name="nombres" title = "No puede estar vacio, no admite caracteres especiales, ni numeros."
+                    placeholder="Ingrese su/s nombres/s" id="nombres" required pattern="[A-Za-z]+ ?[A-Za-z]+">
+                    <label for="nombres" class="hide-msg"></label>
+                </div>                      
+                <div class="input_item">
+                    <label for="tipo_documento">Tipo y Número de Documento:</label>
+                    <div class="row">
+                        <select name="tipo_documento" id="tipo_documento" required>
+                            <option value="CI">CI</option>
+                            <option value="DU" selected>DU</option>
+                            <option value="LC">LC</option>
+                            <option value="LE">LE</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                        <input type="number" name="numero_documento" min = "0" required pattern="[0-9]"
+                            title = "Admite solo numeros. Sin puntos. De 7 a 8 digitos"
+                            placeholder="N° de D.U. sin puntos" id="numero_documento">
+                        <label for="numero_documento" class="hide-msg"></label>
+                    </div>
+                </div>  
+                <div class="input_item">
+                    <label for="prefijo_cuit">Número de CUIL / CUIT</label>
+                    <div class="row">
+                        <select name="prefijo_cuit" id="prefijo_cuit">
+                            <option value="20" selected>20</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="27">27</option>
+                            <option value="30">30</option>
+                        </select>
+                        <input type="number" name="numero_documento" min = "0" 
+                            title = "No puede estar vacio, admite solo numeros."
+                            placeholder="N° de D.U. sin puntos" id="numero_documento" required>
+                        <input type="number" name="sufijo_cuit" min="0" max="9" 
+                            title = "Numeros del 0 al 9" required
+                            value = "1" id="sufijo_cuit">
+                    </div>
+                </div>
+                <div class="input_item">
+                    <label for="dependencia">Dependencia a la que pertenece:</label>
+                    <select name="dependencia" id="dependencia" required>
+                        <option value="placeholder" selected disabled>Indique dependencia</option>
+                        <option value="agencia01">Agencia territorial Santa Fe</option>
+                        <option value="coordinadora01">Coord. de la comision Nacional de trabajo agraria</option>
+                        <option value="direccion01">Dir. de Desarollo, Operaciones y Servicios Tecnologicos</option>
+                        <option value="secretaria01">Secretaria de empleo</option>
+                        <option value="supervision01">Supervision de Auditoria Administrativa, Contable y Tecnologica</option>
+                    </select>                
+                </div>
+                <div class="input_item">
+                    <label for="area">Área / Sector:</label>
+                    <input type="text" name="area" title="Area o sector. formato alfanumerico" required
+                        placeholder="Indique el Area / Sector" id="area">
+                </div>
+                <!--Cargo / Puesto que desempeña:Cargo / Puesto que desempeña:-->
+                <div class="input_item">
+                    <label for="cargo">Cargo / Puesto que desempeña:Cargo / Puesto que desempeña:</label>
+                    <select name="cargo" id="cargo" required>
+                        <option value="placeholder" selected disabled>Indique cargo</option>
+                        <option value="abogado">Abogado</option>
+                        <option value="asistente">Asistente</option>
+                        <option value="director">Director General</option>
+                        <option value="operador">Operador</option>
+                        <option value="secretario">Secretario</option>
+                    </select>  
+                </div>
+                <!--Domicilio de la dependencia:-->
+                <div class="input_item">
+                    <label for="domicilio">Domicilio de la dependencia:</label>
+                    <input type="text" name="domicilio" title = "Formato 'Calle Numero'" required pattern="[A-Za-z]+ [0-9]+"
+                        id="domicilio" placeholder="Ingrese el domicilio">
+                </div>
+                <!--piso y telefono-->
+                <div class="input_item">
+                    <div class="row">
+                        <div class="column">
+                            <label for="piso">Piso</label>   
+                            <input type="number" name="piso" min = "-2" title="Formato numerico"
+                                placeholder ="piso del sector" id="piso" required>                                                        
+                        </div>
+                        <div class="column">              
+                            <label for="telefono">N° de Teléfono:</label> 
+                            <input type="text" name="telefono" title="Formato: 2 o 3 numeros para caracteristica y 8 para el numero de telefono"
+                                required pattern="0[\d][\d]?[\d]-[\d][\d][\d][\d][\d][\d][\d][\d]"
+                                placeholder = "Ingrese telefono" id="telefono">
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </section> 
+        </fieldset>
+    </form>
+
+    <div class="firma">
+        <div class="firma__column">
+            <div class="firma__row">
+                <img src="./imgs/firma-digital.svg" alt="icono de firma" class="img_firma">
+                <p>FIRMADO ELECTRONICAMENTE POR:</p>
+            </div>
+            <div class="firma__row"><p class="firma__parrafo">cruscica</p></div>
+            <div class="firma__row">
+                <label for="fecha_firma">Fecha: </label>
+                <input type="datetime" name="fecha_firma" id="fecha_firma" value=" 13/06/2022" readonly>
+            </div>
+        </div>
+    </div>
+    <div class="input_item">
+        <input type="submit" value="Enviar" class="btn-form" id="btn-form">
+    </div>
+    
+    <script src="scripts.js"></script>
+   <!-- -->
+</body>
+</html>
