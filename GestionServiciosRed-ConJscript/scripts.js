@@ -19,10 +19,12 @@ const validaciones = {
   "apellido" : /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
   "nombres" : /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
   "numero_documento" : /^\d{7,8}$/,
-  "domicilio": false,
+  "numero_documento_cuit" : /^\d{7,8}$/,
+  "domicilio": /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
   "piso" : false,
-  "telefono" : false  
+  "telefono" : /^\d{7,14}$/ // 7 a 14 numeros.  
 }
+
 
 
 const validarCampoFeedback = (evento) => {
@@ -43,20 +45,33 @@ const validarCampoFeedback = (evento) => {
   hide_msg: display: none para la label de abajo del input no validado 
   Ademas es necesaria una label abajo del input a validar, para mostrar el mensaje.
   */
+  $labelMsg = $d.getElementById(campoNombre + "_label");
+  console.log($labelMsg)
   if (CampoResultadoValidacion) {
     console.log("validado!");
     evento.target.classList.remove("error_input");
     evento.target.classList.add("normal_input");
+    
+    /*
     evento.target.nextElementSibling.classList.remove("show-msg");
     evento.target.nextElementSibling.classList.add("hide-msg");
-
+    */    
+    $labelMsg.classList.remove("show-msg");
+    $labelMsg.classList.add("hide-msg");
+    
   } else {
     console.log("NO validado");
     evento.target.classList.remove("normal_input");
     evento.target.classList.add("error_input");    
+    /* probando solo con el cuit, faltaria agregar los ids correspondientes a las label de los otros mensajes
     evento.target.nextElementSibling.classList.remove("hide-msg");
     evento.target.nextElementSibling.classList.add("show-msg");
     evento.target.nextElementSibling.textContent = campoAlertaAlUsuario;
+    */        
+    $labelMsg.classList.remove("hide-msg");
+    $labelMsg.classList.add("show-msg");
+    $labelMsg.textContent = campoAlertaAlUsuario;
+
   }
 
 }
@@ -66,37 +81,7 @@ const validarCampos = (e) => {
     switch (e.target.name){
       case "apellido":
         validarCampoFeedback(e);
-        /*
-        let valor = e.target.value;
-        let expReg = validaciones[e.target.name];
-        let alertaAlUsuario = e.target.title;
-        let resultadoValidacion = false;
-        resultadoValidacion = expReg.test(valor)
-
-        console.clear();
-
-        if (resultadoValidacion) {
-          console.log("validado!");
-          e.target.classList.remove("error_input");
-          e.target.classList.add("normal_input");
-          e.target.nextElementSibling.classList.remove("show-msg");
-          e.target.nextElementSibling.classList.add("hide-msg");
-
-        } else {
-          console.log("NO validado");
-          e.target.classList.remove("normal_input");
-          e.target.classList.add("error_input");
-          //console.log(e.target.nextElementSibling)
-          e.target.nextElementSibling.classList.remove("hide-msg");
-          e.target.nextElementSibling.classList.add("show-msg");
-        }
         
-        console.log("Validando el apellido con ", expReg);   
-        console.log("Mensaje al usuario: ", alertaAlUsuario);   
-        console.log("valor: ", valor);
-        console.log(expReg);
-        console.log("resultado validacion: ", resultadoValidacion);
-        */
       break;  
       case "nombres":
         validarCampoFeedback(e);
@@ -112,15 +97,27 @@ const validarCampos = (e) => {
         console.log("Mensaje al usuario: ", e.target.title);        
         */
       break; 
+      case "numero_documento_cuit":
+        validarCampoFeedback(e);
+        /*
+        console.log("Validando el N° de documento con ", e.target.pattern);
+        console.log("Mensaje al usuario: ", e.target.title);        
+        */
+      break;       
       case "domicilio":
+        validarCampoFeedback(e);
         console.log("Validando el domicilio con ", e.target.pattern);
         console.log("Mensaje al usuario: ", e.target.title);        
       break; 
+      /*
       case "piso":
+        validarCampoFeedback(e);
         console.log("Validando el piso con ", e.target.pattern);     
         console.log("Mensaje al usuario: ", e.target.title);   
       break; 
+      */
       case "telefono":
+        validarCampoFeedback(e);
         console.log("Validando el telefono con ", e.target.pattern);        
         console.log("Mensaje al usuario: ", e.target.title);
       break;
