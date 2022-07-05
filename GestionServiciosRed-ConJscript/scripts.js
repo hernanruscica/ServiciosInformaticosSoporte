@@ -20,9 +20,9 @@ const validaciones = {
   "nombres" : /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
   "numero_documento" : /^\d{7,8}$/,
   "numero_documento_cuit" : /^\d{7,8}$/,
-  "domicilio": /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
+  "domicilio": /[A-Za-z]+ [0-9]+/,
   "piso" : false,
-  "telefono" : /^\d{7,14}$/ // 7 a 14 numeros.  
+  "telefono" : /0[\d]{2}[\d]?[\d]{8}/   
 }
 
 
