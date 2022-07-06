@@ -53,7 +53,7 @@
                             </select>
                             <input type="number" name="numero_documento" min = "0" required pattern="[0-9]"
                                 title = "Admite solo numeros. Sin puntos. De 7 a 8 digitos"
-                                placeholder="N° de D.U. sin puntos" id="numero_documento">                            
+                                placeholder="N° de D.U." id="numero_documento" class="cuit_numero_documento">                            
                         </div>
                         <label for="numero_documento" class="hide-msg" id ="numero_documento_label"></label>
                     </div>  
@@ -61,8 +61,8 @@
                     <!--Número de CUIL / CUIT-->
                     <div class="input_item">
                         <label for="prefijo_cuit">Número de CUIL / CUIT</label>
-                        <div class="row cuil">
-                            <select name="prefijo_cuit" id="prefijo_cuit">
+                        <div class="row cuit">
+                            <select name="prefijo_cuit" id="prefijo_cuit" class="cuit_select">
                                 <option value="20" selected>20</option>
                                 <option value="23">23</option>
                                 <option value="24">24</option>
@@ -71,10 +71,10 @@
                             </select>
                             <input type="number" name="numero_documento_cuit" min = "0" required pattern="[0-9]"
                                 title = "Admite solo numeros. Sin puntos. De 7 a 8 digitos"
-                                placeholder="N° de D.U. sin puntos" id="numero_documento_cuit" required>
+                                placeholder="N° de D.U." id="numero_documento_cuit" required class="cuit_numero_documento">
                             <input type="number" name="sufijo_cuit" min="0" max="9" 
                                 title = "Numeros del 0 al 9" required
-                                value = "1" id="sufijo_cuit">                            
+                                value = "1" id="sufijo_cuit" class="cuit_sufijo">                            
                         </div>
                         <label for="numero_documento_cuit" class="hide-msg" id ="numero_documento_cuit_label"></label>
                     </div>
@@ -99,7 +99,7 @@
 
                     <!--Cargo / Puesto que desempeña:Cargo / Puesto que desempeña:-->
                     <div class="input_item">
-                        <label for="cargo">Cargo / Puesto que desempeña:Cargo / Puesto que desempeña:</label>
+                        <label for="cargo">Cargo / Puesto que desempeña:</label>
                         <select name="cargo" id="cargo" required>
                             <option value="placeholder" selected disabled>Indique cargo</option>
                             <option value="abogado">Abogado</option>
@@ -121,12 +121,12 @@
                     <!--piso y telefono-->
                     <div class="input_item">
                         <div class="row">
-                            <div class="column">
+                            <div class="column numero_piso">
                                 <label for="piso">Piso</label>   
-                                <input type="number" name="piso" min = "-2" title="Formato numerico"
+                                <input type="number" name="piso" min = "-2" title="Formato numerico" 
                                     placeholder ="piso del sector" id="piso" required>                                                        
                             </div>
-                            <div class="column">              
+                            <div class="column numero_telefono">              
                                 <label for="telefono">N° de Teléfono:</label> 
                                 <input type="text" name="telefono" title="Formato: 01144445555 o 022077779999"
                                     required pattern="0[\d][\d]?[\d]-[\d][\d][\d][\d][\d][\d][\d][\d]"
