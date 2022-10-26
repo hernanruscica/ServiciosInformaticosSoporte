@@ -1,4 +1,17 @@
+
 let enlace, titulo;
+
+let enlaces = [],
+CANTIDAD_MAX_HISTORIAL = 10;
+
+
+
+/*DOM Variables */
+const $d =  document;
+const $historialTitulo = $d.getElementById("historial-titulo");
+const $historialContenedor = $d.getElementById("historial-contenedor");
+
+
 //recibe los ids de los inputs
 function getVariables(urlId, tituloId) {
     const $url = document.getElementById(urlId);
@@ -6,10 +19,14 @@ function getVariables(urlId, tituloId) {
     enlace = $url.value;
     titulo = $titulo.value;
     //console.log(titulo, enlace);
-    generarEnlace('enlace', enlace, titulo);
-    generarEnlaceHTML('enlaceFormatoHTML', enlace, titulo)        
-}
-getVariables('inputUrl', 'inputTitulo')
+    if (enlace != "" && titulo != ""){
+        generarEnlace('enlace', enlace, titulo);
+        generarEnlaceHTML('enlaceFormatoHTML', enlace, titulo)   
+        agregarEnlace(enlaces, enlace, titulo);     
+        mostrarHistorial();
+    }
+} 
+/*getVariables('inputUrl', 'inputTitulo');*/
 
 function generarEnlace(enlaceId, enlace, titulo){
     const $fragment = document.createDocumentFragment();
@@ -66,8 +83,14 @@ function generarEnlaceHTML(enlaceHTMLId, enlace, titulo){
     $enlaceFormatoHTMLid.appendChild($fragment);        
 }
     
-function copyToClickBoard(){
-    let content = document.getElementById('enlaceFormatoHTMLid').innerHTML;
+function copyToClickBoard(enlace){
+    let content = null;
+    if (enlace == null){
+        content = document.getElementById('enlaceFormatoHTMLid').innerHTML;
+    }else{
+        content = enlace;
+    }
+
     const menor = '&lt;';
     const mayor = '&gt;'; 
     content = content.replaceAll('&lt;', '<');
@@ -99,3 +122,82 @@ function copyToClickBoard(){
     $labelCopiado.classList.remove('oculto');
     $labelCopiado.classList.add('titulos_sueltos');
 }
+
+
+function agregarEnlace(arrayEnlaces, url, titulo){
+    if (arrayEnlaces.length  >= CANTIDAD_MAX_HISTORIAL){
+        arrayEnlaces.shift();
+    }
+    arrayEnlaces.push(
+                    {url: `${url}`,
+                    titulo: `${titulo}`}         
+                );
+   
+localStorage.setItem("enlaces", JSON.stringify(arrayEnlaces));
+}
+
+/*
+agregarEnlace(enlaces, "https://www.youtube.com", "Youtube");
+agregarEnlace(enlaces, "https://www.argentina.gov.ar", "Argentina.gov.ar");
+agregarEnlace(enlaces, "https://ultimo.enlace.agregado", "ultimo enlace");
+agregarEnlace(enlaces, "https://ultimo.deverdad.enlace.agregado", "ultimo enlace de verdad");
+agregarEnlace(enlaces, "https://gmail.com", "gmail");
+console.log(JSON.parse(localStorage.getItem("enlaces"))[0]["url"]);
+console.log(JSON.parse(localStorage.getItem("enlaces")));*/
+
+/*
+<div class="historial__enlace">
+    <a href="#">enlace 1</a>
+    <button class="historial-btn-copiar">Copiar</button>
+</div>   
+*/
+function mostrarHistorial() {
+    let enlaces = JSON.parse(localStorage.getItem("enlaces"));
+    /*console.log(enlaces);*/
+    $historialContenedor.innerHTML = "";
+    let enlacesLongitud = enlaces.length;
+    
+    console.clear();
+    $historialContenedor.innerHTML = `<h3 id="historial-titulo" >Historial</h3>`
+    enlaces.reverse().forEach((enlace) => {
+        /*console.log(enlace[enlaces.length - indice], indice);
+        let url = enlace[enlaces.length - indice]["url"];
+        let titulo = enlace[enlaces.length - indice]["titulo"];*/ 
+        $historialContenedor.innerHTML += `<div class="historial__enlace">
+        <a href="${enlace["url"]}" target="_blank">${enlace["titulo"]}</a>
+        <button class="historial-btn-copiar" id = "btn-copiar-historial">Copiar</button>
+        </div> `       
+    })    
+    
+    
+}
+/*mostrarHistorial();*/
+
+$d.addEventListener('click', (e) => {    
+    if (e.target.id == "inputUrl" || e.target.id == "inputTitulo"){
+        /*console.log("inputs"); */
+        seleccionarTodoTexto(e.target.id);   
+    }
+    if (e.target.id == "btn-generar"){
+        /*console.log("boton de generar");*/
+        getVariables('inputUrl', 'inputTitulo')
+        
+    }
+    if (e.target.id == "btn-copiar") {
+        /*console.log("boton de copiar");*/
+        copyToClickBoard();
+    }
+    
+    if (e.target.id == "btn-copiar-historial") {
+        console.log("boton de copiar historial");
+        let enlace = e.target.previousElementSibling;
+        console.log(enlace.outerHTML);
+        copyToClickBoard(enlace.outerHTML);
+    }
+})
+
+$d.addEventListener('DOMContentLoaded', () => {
+    mostrarHistorial();
+    enlaces = JSON.parse(localStorage.getItem("enlaces"));
+    console.log(enlaces);
+})

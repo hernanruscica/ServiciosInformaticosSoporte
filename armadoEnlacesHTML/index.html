@@ -10,45 +10,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
-    <div class="contenedor">
-        <h1 class="titulos_sueltos">Armador de Enlaces HTML</h1>
-        <p class="titulos_sueltos">Aplicacion web que arma una etiqueta <b>&lt;a&gt</b>, con los atributos <b>href</b> y <b>target=_'blank'</b></p>
-    </div>    
-    <form action="" class = "contenedor">
-        <div class="entrada">
-            <label for="inputUrl">URL</label>
-            <input type="text" name="" id="inputUrl" placeholder="Ingrese la url del enlace" 
-                onclick="seleccionarTodoTexto('inputUrl')" class="entrada__input">
+<body> 
+    <main class="contenedor">
+        <header >
+            <h1 class="titulos_sueltos" style="text-align: center">Armador de Enlaces HTML</h1>
+            <p class="titulos_sueltos">Aplicacion web que arma una etiqueta <b>&lt;a&gt</b>, con los atributos <b>href</b> y <b>target=_'blank'</b></p>
+        </header>    
+        <form action="" class="row">
+            <div class="cols">
+                <div class="entrada">
+                    <label for="inputUrl">URL</label>
+                    <input type="text" name="" id="inputUrl" placeholder="Ingrese la url del enlace" class="entrada__input">
+                </div>
+                <div class="entrada">
+                    <label for="inputTitulo">Titulo</label>
+                    <input type="text" name="" id="inputTitulo" placeholder="Ingrese el titulo del enlace" class="entrada__input">
+                </div>
+            </div>
+            <input type="button" value="Generar" class="cols btn btn-generar" id="btn-generar"> 
+            <!--<i class="fa-solid fa-play"></i>-->
+            
+                   
+        </form>
+        <div class="enlace-vista-previa" id="enlace" >                        
+            <h3 class="titulos_sueltos">Vista previa del enlace</h3>
+            <a href="" target="_blank"></a>                 
         </div>
-        <div class="entrada">
-            <label for="inputTitulo">Titulo</label>
-            <input type="text" name="" id="inputTitulo" placeholder="Ingrese el titulo del enlace" 
-                onclick="seleccionarTodoTexto('inputTitulo')" class="entrada__input">
+        <div class="enlaceFormatoHTML-contenedor" id="enlaceFormatoHTML" >        
+            <textarea name="" id="btn-copiar" rows="5" disabled = "true" class = "contenedor enlaceFormatoHTML">El campo URL y Titulo NO pueden estar vacios. Una véz completados, acá se verá el enlace generado.                
+            </textarea>
+            <button  class="btn" id = "btn-copiar">
+                 Copiar
+            </button>
+            <label class="label_copiado oculto">COPIADO ...</label>            
         </div>
-        <input type="button" value="Generar HTML" class="btn"
-            onclick="getVariables('inputUrl', 'inputTitulo')">
-    </form>
-  
-    
-    <div id="enlace" class="contenedor">            
-        <!--
-        <h3 class="titulos_sueltos">Vista previa del enlace</h3>
-        <a href="" target="_blank"></a>     
-        -->        
-    </div>
-    <div id="enlaceFormatoHTML" class="contenedor">
-        <!--        
-        <textarea name="" id="" rows="5" disabled = "true" class = "contenedor enlaceFormatoHTML">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat, asperiores fugit praesentium quo ipsa, a porro quibusdam hic sed, vel nisi qui. Tenetur aliquam assumenda natus autem quod odit?
-        </textarea>
-        <button onclick="copyToClickBoard()" class="btn">COPIAR</button>
-        <label class="label_copiado oculto">COPIADO ...</label><label class="label_copiado oculto">COPIADO ...</label>
-        -->
-    </div>
+        <div class="historial" id="historial-contenedor">
+           <!-- <h3 id="historial-titulo">Historial</h3>   
+            
+            <div class="historial__enlace">
+                <a href="#">enlace 1</a>
+                <button class="historial-btn-copiar" id="btn-copiar-historial">Copiar</button>
+            </div>            
+            -->         
+
+            
+
+        </div>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>
