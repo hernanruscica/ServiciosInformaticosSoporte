@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armador de Enlaces HTML</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="dist/css/poncho.min.css" rel="stylesheet">
+    <link href="dist/css/icono-arg.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>Armador de Enlaces HTML</h1>
+                    <hr>
+                    <div class="alert alert-info">
+                        <p>Permite armar una etiqueta <b>&lt;a&gt;</b>, con los atributos <b>href</b> y <b>target=_'blank'</b>. Tiene un historial con los últimos 10 enlaces.</p>
+                    </div>
+                    <form action="">
+                        <fieldset>
+                            <legend>
+                                <h3>Completa los datos del enlace</h3>
+                                <p>Tenés que ingresar un título que será visible y el enlace html al recurso.</p>
+                            </legend>
+                        </fieldset>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-12 form-group item-form">
+                            <label for="titulo">Título</label>
+                            <input type="text" name="name" class="form-control" id="titulo" required="" aria-required="true">
+                            <p class="help-block error hidden">Ingresá el título</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group item-form">
+                            <label for="enlace">Enlace</label>
+                            <input type="text" name="name" class="form-control" id="enlace" required="" aria-required="true">
+                            <p class="help-block error hidden">Ingresá el enlace</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <button type="button" class="btn btn-success">GENERÁ TU ENLACE HTML</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>Historial de enlaces</h2>
+                    <div class="alert alert-info">
+                        <p>
+                            <a href="#">PC/Notebook no enciende/no inicia</a>
+                        </p>
+                      <p>&lt;a href = 'https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/a4e1b960-9cd2-2f17-bc5e-7616926f31c1,dbfb7389-fde0-f03c-235d-92ecfe22d90a' target = '_blank'&gt;PC/Notebook no enciende/no inicia&lt;/a&gt;</p><br>
+                      <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div class="alert alert-info">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit iure quod, quae architecto animi corporis dolorum odio? Assumenda itaque eos laboriosam at? Voluptatem maxime quam quas error possimus tempore ullam!</p><br>
+                      <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js”></script>
+</body>
+</html>
