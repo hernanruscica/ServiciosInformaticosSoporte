@@ -4,7 +4,9 @@
 
 <h1>pagina que arma un enlace html</h1>
 <p>Ademas agrega el target= '_blank' para enviar por service manager<br>
-<a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/armadoEnlacesHTML/'>Demo Armador de enlaces</a> </p>
+<a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/armadoEnlacesHTML/'>Demo Armador de enlaces</a> 
+<a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/armadoEnlacesHTML/index-poncho.html'>Version con poncho</a>
+</p>
 
 <h1>Seccion con instructivos utiles en el ministerio de trabajo</h1>
 <a href= 'https://hernanruscica.github.io/ServiciosInformaticosSoporte/instructivos/'>Ir a "Instructivos"</a> </p>
