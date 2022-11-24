@@ -10,8 +10,9 @@
     
     <link href="dist/css/poncho.min.css" rel="stylesheet">
     <link href="dist/css/icono-arg.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>    
     <div class="container">
         <section>
             <div class="row">
@@ -32,14 +33,14 @@
                     <div class="row">
                         <div class="col-md-12 form-group item-form">
                             <label for="titulo">Título</label>
-                            <input type="text" name="name" class="form-control" id="titulo" required="" aria-required="true">
+                            <input type="text" name="name" class="form-control" id="titulo" required="" aria-required="true" Autocomplete="off" >
                             <p class="help-block error hidden">Ingresá el título</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 form-group item-form">
                             <label for="enlace">Enlace</label>
-                            <input type="text" name="name" class="form-control" id="enlace" required="" aria-required="true">
+                            <input type="text" name="name" class="form-control" id="enlace" required="" aria-required="true"  Autocomplete="off">
                             <p class="help-block error hidden">Ingresá el enlace</p>
                         </div>
                     </div>
@@ -69,6 +70,7 @@
             </div>
         </section>
     </div>
+    <div class="modal-copiado" id = "modal-copiado"><h3>ENLACE COPIADO</h3></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="myScripts.js"></script>
