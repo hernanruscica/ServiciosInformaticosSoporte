@@ -1,17 +1,64 @@
-.modal-copiado{
-    position: absolute;
+.modal-mensaje{
+    position: fixed;
     top: 50vh;    
     left: -100vw;
     width: 100vw;
     height: auto;
-    background-color: #37BBED;
+    padding: 0.5em 0 1.5em 0;    
     color: aliceblue;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
+
+.modal-mensaje__btn {
+    color: #333;
+    font-size: 1.2em;
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    border: none;    
+}
+.modal-mensaje__btn + .modal-mensaje__btn {
+    margin-left: 1em;
+}
+
+.modal-mensaje-mostrar {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-fondo{
+    position: fixed;
+    top: 0;    
+    right: -100vw;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;     
+    transition: all 0.3s ease-in-out;
+}
+.modal-fondo-mostrar {    
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-mensaje--copiar{
+    background-color: #37BBED;
+    transition: all 0.3s ease-in-out;
+}
+.modal-mensaje--borrar{
+    background-color: #c62828;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/*sin usar*/
 .visible {
     left: 0;
     transition: all 0.3s ease-in-out;

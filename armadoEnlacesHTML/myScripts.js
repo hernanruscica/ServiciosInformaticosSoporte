@@ -76,17 +76,89 @@ const copiarEnMemoria = (enlacesArray, id) => {
         console.log('Something went wrong', err);
     })
 }
-const animacionCopiado = () => {
-    const $modalCopiado = $d.getElementById('modal-copiado');        
+const mostrarMsjCopiado = () => {
+    const $modalMensaje = $d.getElementById('modal-mensaje');  
+    $modalMensaje.classList.add('modal-mensaje--copiar');
+    $modalMensaje.innerHTML = ''; 
+    $modalMensaje.innerHTML = `<h3>ENLACE COPIADO</h3>`;     
     function ocultar(){
-        $modalCopiado.classList.remove('visible');
-        console.log("ocultando")
+        $modalMensaje.classList.remove('visible');
+        //console.log("ocultando")
+        $modalMensaje.classList.remove('modal-mensaje--copiar');
         clearTimeout(myTimeout);
     }    
     let milliseconds = 1500;
-    $modalCopiado.classList.add('visible')
+    $modalMensaje.classList.add('visible');
     const myTimeout = setTimeout(ocultar, milliseconds);    
 }
+const mostrarMsjBorrado = (id) => {
+    console.log(`confirma el borrado del enlace con id: ${id}`);
+    let titulo = getEnlace(enlaces,id).titulo;    
+    const $modalMensaje = $d.getElementById('modal-mensaje');   
+    $modalMensaje.classList.add('modal-mensaje--borrar');
+    $modalMensaje.classList.add('visible');
+    $modalMensaje.innerHTML = '';
+    $modalMensaje.innerHTML = `<h3>¿CONFIRMA EL BORRADO?</h3>
+                                <p>${titulo}</p>
+                                <div>
+                                    <button id = 'delete-btn-confirm' data-id = ${id}>Si</button>
+                                    <button>No</button>
+                                </div>
+    `;     
+    function ocultar(){
+        $modalMensaje.classList.remove('visible');
+        //console.log("ocultando")
+        $modalMensaje.classList.remove('modal-mensaje--borrar');
+        clearTimeout(myTimeout);
+    }  
+    let milliseconds = 1500;
+    $modalMensaje.classList.add('visible');
+    //const myTimeout = setTimeout(ocultar, milliseconds);        
+};    
+
+const mostrarMensaje = (tipo, id) => {
+    console.log(`muestro mensaje del tipo '${tipo}' con id: ${id}`);
+    let titulo = id !== undefined ? getEnlace(enlaces,id).titulo : null; 
+    const $modalMensaje = $d.getElementById('modal-mensaje'); 
+    const $modalFondo = $d.getElementById('modal-fondo');            
+    $modalMensaje.innerHTML = ''; 
+    switch (tipo){
+        case 'copiado': 
+            console.log(`Mensaje de Copiado`);              
+            $modalMensaje.innerHTML = `<h4>ENLACE COPIADO</h4>`;  
+            $modalMensaje.classList.add('modal-mensaje--copiar');    
+            $modalMensaje.classList.add('modal-mensaje-mostrar');
+            $modalFondo.classList.add('modal-fondo-mostrar');
+        break
+        case 'borrado':
+            console.log(`Mensaje de borrado de ${titulo}`);     
+            $modalMensaje.innerHTML = `<h4>¿CONFIRMA EL BORRADO?</h4>
+                                        <p>${titulo}</p>
+                                        <div>
+                                            <button class='modal-mensaje__btn' id = 'delete-btn-confirm' data-id = ${id}>Si</button>
+                                            <button  class='modal-mensaje__btn' id = 'delete-btn-cancel'>No</button>
+                                        </div>`;  
+            $modalMensaje.classList.add('modal-mensaje--borrar')    
+            $modalMensaje.classList.add('modal-mensaje-mostrar');
+            $modalFondo.classList.add('modal-fondo-mostrar');
+        break
+        default:
+            console.log('Tiene que enviar un tipo de mensaje valido.');
+        break
+    }
+}
+//mostrarMensaje('borrado', 1);
+const ocultarMensaje = () => {
+    console.log("ocultando el mensaje");
+    const $modalMensaje = $d.getElementById('modal-mensaje'); 
+    const $modalFondo = $d.getElementById('modal-fondo'); 
+    $modalMensaje.classList.remove('modal-mensaje--copiar');     
+    $modalMensaje.classList.remove('modal-mensaje--borrar');
+    $modalMensaje.classList.remove('modal-mensaje-mostrar'); 
+    $modalFondo.classList.remove('modal-fondo-mostrar');    
+}
+
+
 /*fin utilidades*/
 
 
@@ -114,13 +186,32 @@ $d.addEventListener('click', (e) => {
     //click en el boton de copiar un enlace
     if (e.target.id == 'copiar-btn'){        
         copiarEnMemoria(enlaces, e.target.dataset.id);
-        animacionCopiado();        
+        //mostrarMsjCopiado();        
+        mostrarMensaje('copiado');
+        let milisDelayMsg = 1000;
+        let miTimer = setTimeout(ocultarMensaje, milisDelayMsg)
     }
     //click en el boton de borrar un enlace
     if (e.target.id == 'delete-btn'){
+        mostrarMensaje('borrado', e.target.dataset.id);
+        /*mostrarMsjBorrado(e.target.dataset.id);        
+        
         enlaces = deleteEnlace(enlaces, e.target.dataset.id);
         cargarEnlacesDOM(enlaces, 'historial-container');
         localStorage.setItem(variableLocalStorage, JSON.stringify(enlaces));
+        */
+    }
+    //click en el boton de 'SI' en el modal de confirmacion de borrar
+    if (e.target.id == 'delete-btn-confirm'){
+        console.log('click en el btn de confirmacion de borrado');
+        enlaces = deleteEnlace(enlaces, e.target.dataset.id);
+        cargarEnlacesDOM(enlaces, 'historial-container');
+        localStorage.setItem(variableLocalStorage, JSON.stringify(enlaces));
+        ocultarMensaje();
+    }
+    if (e.target.id == 'delete-btn-cancel'){
+        console.log("click en el btn de cancelar el borrado");
+        ocultarMensaje();
     }
 })
 $d.addEventListener('DOMContentLoaded', (e) =>{
