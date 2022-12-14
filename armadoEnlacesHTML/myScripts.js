@@ -10,13 +10,13 @@ let variableLocalStorage = 'enlaces';
 let enlaces = null;
 
 
-let idCounter = 0;
+let idCounter = null;
 //localStorage.setItem(variableLocalStorage, enlaces);
 
 /*inicio Operaciones pseudo CRUD */
 const setEnlace = (enlacesArray, data) => {    
     enlacesArray.unshift(data);
-    idCounter += 1;
+    //idCounter += 1;
     return enlacesArray;    
 }
 const deleteEnlace = (enlacesArray, id ) => {
@@ -174,9 +174,17 @@ $d.addEventListener('click', (e) => {
         let enlace = $enlaceInput.value;               
         if (titulo != '' && enlace != ''){            
             let dateObject = new Date();        
+            if (localStorage.getItem('idCounter') == null){
+                idCounter = 0;
+            }else{
+                idCounter = parseInt(localStorage.getItem('idCounter')) + 1;                
+            }
+            localStorage.setItem('idCounter', idCounter);
+
             enlaces = setEnlace(enlaces, {'id': idCounter, 'titulo': titulo,'enlace': enlace,'data': dateObject});                   
             cargarEnlacesDOM(enlaces, 'historial-container');
             localStorage.setItem(variableLocalStorage, JSON.stringify(enlaces));
+            
         }   
         if (enlace == '') $enlaceInput.nextElementSibling.classList.remove('hidden');        
         else $enlaceInput.nextElementSibling.classList.add('hidden');        
