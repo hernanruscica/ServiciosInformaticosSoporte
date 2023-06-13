@@ -64,3 +64,14 @@
     transition: all 0.3s ease-in-out;
 }
 
+/*nueva version de armador de respuestas*/
+
+.main-title-icon{
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.info-icon{
+    font-size: 3rem; 
+    margin-right: 1rem;   
+}
