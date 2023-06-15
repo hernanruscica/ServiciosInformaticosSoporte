@@ -71,6 +71,7 @@
     --color-primary-light: hsl(203, 100%, 67%);
     --color-danger: #C62828;
     --color-success: #2E7D33;
+    --color-success-light: hsl(124, 46%, 64%);
     --color-accent: hsl(37, 95%, 55%);
     --color-accent-light: hsl(37, 95%, 85%);
     --color-information: #2897D4;
@@ -122,7 +123,7 @@ body{
 
 .operators-btn{
     font-size: 1.6em;    
-    cursor: pointer;           
+    cursor: pointer;             
 }
 
 .operators-btn:hover{
@@ -134,12 +135,20 @@ body{
     color: var(--color-danger);    
 }
 
+.operators-btn-success {
+    color: var(--color-success);    
+}
+
 .operators-btn-accent-light {
     background-color: var(--color-accent-light);
 }
 
 .operators-btn-primary-light {
     background-color: var(--color-primary-light);
+}
+
+.operators-btn-success-light {
+    background-color: var(--color-success-light);
 }
 
 .info-buttons-container{
@@ -159,4 +168,13 @@ body{
 .btn-rounded>i{
     font-size: 1.6em;
     padding: 0em 0em 0em  0.5em;
+}
+
+.my-form-label{
+    cursor: pointer;
+}
+
+.my-form-label>i{
+    margin-right: 1rem;
+    font-size: 1.5em;
 }
