@@ -64,14 +64,99 @@
     transition: all 0.3s ease-in-out;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;700&display=swap');
 /*nueva version de armador de respuestas*/
+:root {
+    --color-primary: #0072bb;
+    --color-primary-light: hsl(203, 100%, 67%);
+    --color-danger: #C62828;
+    --color-success: #2E7D33;
+    --color-accent: hsl(37, 95%, 55%);
+    --color-accent-light: hsl(37, 95%, 85%);
+    --color-information: #2897D4;
+    --color-information-light: #F3FAFF;
+    --color-information-dark: #002F4D;
+    --ff-body: 'Encode Sans', sans-serif;;
+}
+
+body{
+    font-family: var(--ff-body);
+}
 
 .main-title-icon{
-    font-size: 3rem;
+    font-size: 4rem;
     margin-right: 1rem;
+    color: var(--color-primary);
+}
+
+.main-title{
+    margin: 0px;
+}
+
+.secondary-title{
+    color: var(--color-primary-dark);    
+    font-size: 1.6em; 
+    margin: 1em 0;   
+}
+
+.secundary-title-icon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--color-primary);
+}
+
+.info-card{
+    background-color: var(--color-information-light);
+    border: solid 2px var(--color-information);
+    color: var(--color-information-dark);
+    line-height: 1.8em;
+    letter-spacing: 0.04em;
+    margin-bottom: 2em;
 }
 
 .info-icon{
-    font-size: 3rem; 
-    margin-right: 1rem;   
+    font-size: 4rem; 
+    margin-right: 1rem;  
+    color: var(--color-information); 
+}
+
+.operators-btn{
+    font-size: 1.6em;    
+    cursor: pointer;           
+}
+
+.operators-btn:hover{
+    transform: scale(1.2);   
+    
+}
+
+.operators-btn-danger {
+    color: var(--color-danger);    
+}
+
+.operators-btn-accent-light {
+    background-color: var(--color-accent-light);
+}
+
+.operators-btn-primary-light {
+    background-color: var(--color-primary-light);
+}
+
+.info-buttons-container{
+    margin: 2em 1em 1em 1em;
+    gap: 1em
+}
+
+.btn-rounded{
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    width: auto;
+}
+
+.btn-rounded>i{
+    font-size: 1.6em;
+    padding: 0em 0em 0em  0.5em;
 }

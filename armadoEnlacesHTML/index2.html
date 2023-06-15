@@ -8,17 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="dist/css/poncho.min.css" rel="stylesheet">
-    <link href="dist/css/icono-arg.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>    
-    <div class="container border border-primary">
-        <div class="row m-4 border border-primary">            
-                <i class="col-2 fa-regular fa-comment-dots main-title-icon"></i>
-                <h2 class="col-9 display-6">Armador de respuestas</h2>            
+    <div class="container ">
+        <div class="row my-4 align-items-center">            
+                <i class="col-1 fa-regular fa-comment-dots main-title-icon"></i>
+                <h1 class="col-9 display-6 main-title">Armador de respuestas</h1>            
         </div>        
-        <div class="row alert alert-primary align-items-center" role="alert">
+        <div class="row alert alert-primary align-items-center info-card" role="alert">
             <i class="col-1 fa-solid fa-circle-info info-icon"></i>
             <p class="col-10">
                 Permite armar respuestas en base a plantillas, ofertas, instructivos y respuestas genéricas sobre solicitudes y/o incidentes. 
@@ -44,8 +43,9 @@
                 </div>
             </div>
             <div class="col dropdown">
+                <label for="exampleFormControlInput1" class="col form-label">Plantillas <i class="fa-regular fa-file-lines"></i> </label>
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Plantilla
+                  Seleccione una opcion
                 </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Ofertas del portal</a></li>
@@ -73,10 +73,11 @@
 
         <!--vista previa respuesta-->
         <div class="  align-items-center" role="alert">
-            <h2 class=" fw-light">
-                <i class="fa-regular fa-eye"></i>
-                Vista previa de la respuesta</h2>     
-            <div class="alert alert-info" role="alert">
+            <h2 class=" fw-light align-items-center secondary-title">
+                <i class="fa-regular fa-eye secundary-title-icon"></i>
+                <span>Vista previa de la respuesta</span>
+            </h2>     
+            <div class="alert alert-info info-card" role="alert">
                 <p >
                     Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas. 
                     Le envío el enlace a la misma.
@@ -87,63 +88,92 @@
                         <a href="">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus"></i>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
                     </li>
                     <li>                        
                         <a href="">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus"></i>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
                     </li>
                 </ul>
-                <div class="row">
-                    <button type="button" class="col-2 btn btn-primary">
+                <p>Quedamos a su disposición.
+                </p>
+                <div class="row info-buttons-container">
+                    <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
                         Copiar <i class="fa-regular fa-copy"></i>
                     </button>
-                    <button type="button" class="col-2 btn btn-warning">
-                        Editar <i class="fa-regular fa-edit"></i>
+                    <button type="button" class="col-2 btn btn-warning btn-rounded operators-btn-accent-light">
+                        Editar <i class="fa-regular fa-edit "></i>
                     </button>
                 </div>
               </div>
         </div>
         <!--vista previa respuesta-->
 
-        <!--Historial de respuestas-->
+        <!--Historial de respuestas-->        
         <div class="  align-items-center" role="alert">
-            <h2 class="fw-light ">
-                <i class="fa-regular fa-calendar"></i>
-                Historial de respuestas</h2>    
-            <h3 class="fw-light" >09 de Junio de 2023</h3> 
-            <div class="alert alert-info" role="alert">
+            <h2 class="fw-light align-items-center secondary-title">
+                <i class="fa-regular fa-calendar secundary-title-icon"></i>
+                <span>Historial de respuestas</span>
+            </h2>    
+            
+            <!--respuesta en el historial-->
+            <h3 class="fw-light mb-0 fs-5" >09 de Junio de 2023</h3> 
+            <div class="alert alert-info info-card" role="alert">
                 <p >
                     Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas. 
                     Le envío el enlace a la misma.
                     enlace/es: 
                 </p>
                 <ul>
-                    <li>                        
+                    <li  >                        
                         <a href="">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus"></i>
+                            Forzado de contraseña para usuario del sistema Mesa de Entradas
+                        </a>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
                     </li>
-                    <li>                        
-                        <a href="">
+                    <li >                        
+                        <a href="" >
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus"></i>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
                     </li>
                 </ul>
-                <div class="row">
+                <p>Quedamos a su disposición.
+                </p>
+                <div class="row info-buttons-container">
                     <button type="button" class="col-2 btn btn-primary">
                         Copiar <i class="fa-regular fa-copy"></i>
                     </button>
                     <button type="button" class="col-2 btn btn-warning">
                         Editar <i class="fa-regular fa-edit"></i>
                     </button>
-                </div>
-              </div>
-        </div>
+                </div>              
+            </div>
+            <!--respuesta en el historial-->
+
+            <!--respuesta en el historial-->
+            <h3 class="fw-light mb-0 fs-5" >09 de Junio de 2023</h3> 
+            <div class="alert alert-info info-card" role="alert">                
+                <form action="">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Respuesta: </label>
+                        <!--&#13; new line in textarea-->
+                        <textarea  class="form-control" id="exampleFormControlTextarea1" rows="10" style="height: auto;">Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas.Le envío el enlace a la misma.&#13;Enlace/es:&#13;<a href="https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/3e49e3d9-a68e-8326-17db-c1bf8bd75338,9aa0db36-9edc-ec44-d64b-e5d35fc3f23d" target="_blank">Forzado de contraseña para usuario del sistema Mesa de Entradas</a>&#13;&#13;Quedamos a su disposición.                            
+                        </textarea>
+                    </div>
+                </form>
+                <div class="row info-buttons-container">                   
+                    <button type="button" class="col-2 btn btn-success">
+                        Guardar <i class="fa-regular fa-save"></i>
+                    </button>
+                </div>              
+            </div>
+            <!--respuesta en el historial-->
+
+
         <!--Historial de respuestas-->
 
     </div>
