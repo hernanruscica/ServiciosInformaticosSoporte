@@ -178,3 +178,26 @@ body{
     margin-right: 1rem;
     font-size: 1.5em;
 }
+
+.searchOfertasResultados {
+    background-color: var(--color-information-light);    
+    position: absolute; 
+    top: 2.5em; 
+    left: 3.5em;
+    width: 620px;
+    z-index: 10;
+    padding: 0;    
+}
+
+
+
+.searchOfertasResultado{
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0.2em 0.8em;
+    width: 100%;
+    
+}
+.searchOfertasResultado:hover{
+    background-color: hsl(205, 100%, 78%);
+}

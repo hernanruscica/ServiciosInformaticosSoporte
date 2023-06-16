@@ -29,19 +29,44 @@ const ofertas = [
         id: "2",
         nombre: "Forzado de contraseña para usuario del sistema Mesa de Entradas",
         enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
-        }
+        },
 
 ];
 
 const buscarOfertas = (busqueda) => {
     let busquedaMinus = busqueda.toLowerCase()
-    let respuestas = ofertas.filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus)).map(oferta => oferta.nombre);
-    
+    let respuestas = ofertas.filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus));    
     return respuestas;
 }
 
 $d.addEventListener('keyup', (e)=> {
-    if (e.target.id == 'input-busqueda'){
-        console.log(buscarOfertas(e.target.value));        
+    if (e.target.id == 'input-busqueda' && e.target.value != "" && e.target.value != " "){
+        let ofertasEncontradas = buscarOfertas(e.target.value);             
+        mostrarDropdownBusqueda(ofertasEncontradas, e.target.id);       
+    }else{
+        let $divResultados = $d.getElementById("searchOfertasResultados");    
+        $divResultados.innerHTML = "";
     }
 })
+
+$d.addEventListener('click', (e) => {
+    console.log(e.target.value);
+});
+
+
+const mostrarDropdownBusqueda = (ofertas, idPadre) => {
+
+    let $inputPadre = $d.getElementById(idPadre);   
+   
+    let $divResultados = $d.getElementById("searchOfertasResultados");    
+    
+    $divResultados.innerHTML = "";    
+    ofertas.forEach((oferta) => {
+        let $divResultado =  $d.createElement("div");
+        $divResultado.classList.add("searchOfertasResultado");      
+        $divResultado.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                   <span>${oferta.nombre}</span>`;        
+        $divResultados.appendChild($divResultado);
+    });       
+    $inputPadre.insertAdjacentElement("afterend",$divResultados);    
+}
