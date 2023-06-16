@@ -1,0 +1,203 @@
+.modal-mensaje{
+    position: fixed;
+    top: 50vh;    
+    left: -100vw;
+    width: 100vw;
+    height: auto;
+    padding: 0.5em 0 1.5em 0;    
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-mensaje__btn {
+    color: #333;
+    font-size: 1.2em;
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    border: none;    
+}
+.modal-mensaje__btn + .modal-mensaje__btn {
+    margin-left: 1em;
+}
+
+.modal-mensaje-mostrar {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-fondo{
+    position: fixed;
+    top: 0;    
+    right: -100vw;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;     
+    transition: all 0.3s ease-in-out;
+}
+.modal-fondo-mostrar {    
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-mensaje--copiar{
+    background-color: #37BBED;
+    transition: all 0.3s ease-in-out;
+}
+.modal-mensaje--borrar{
+    background-color: #c62828;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/*sin usar*/
+.visible {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;500;700&display=swap');
+/*nueva version de armador de respuestas*/
+:root {
+    --color-primary: #0072bb;
+    --color-primary-light: hsl(203, 100%, 67%);
+    --color-danger: #C62828;
+    --color-success: #2E7D33;
+    --color-success-light: hsl(124, 46%, 64%);
+    --color-accent: hsl(37, 95%, 55%);
+    --color-accent-light: hsl(37, 95%, 85%);
+    --color-information: #2897D4;
+    --color-information-light: #F3FAFF;
+    --color-information-dark: #002F4D;
+    --ff-body: 'Encode Sans', sans-serif;;
+}
+
+body{
+    font-family: var(--ff-body);
+}
+
+.main-title-icon{
+    font-size: 4rem;
+    margin-right: 1rem;
+    color: var(--color-primary);
+}
+
+.main-title{
+    margin: 0px;
+}
+
+.secondary-title{
+    color: var(--color-primary-dark);    
+    font-size: 1.6em; 
+    margin: 1em 0;   
+}
+
+.secundary-title-icon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--color-primary);
+}
+
+.info-card{
+    background-color: var(--color-information-light);
+    border: solid 2px var(--color-information);
+    color: var(--color-information-dark);
+    line-height: 1.8em;
+    letter-spacing: 0.04em;
+    margin-bottom: 2em;
+}
+
+.info-icon{
+    font-size: 4rem; 
+    margin-right: 1rem;  
+    color: var(--color-information); 
+}
+
+.operators-btn{
+    font-size: 1.6em;    
+    cursor: pointer;             
+}
+
+.operators-btn:hover{
+    transform: scale(1.2);   
+    
+}
+
+.operators-btn-danger {
+    color: var(--color-danger);    
+}
+
+.operators-btn-success {
+    color: var(--color-success);    
+}
+
+.operators-btn-accent-light {
+    background-color: var(--color-accent-light);
+}
+
+.operators-btn-primary-light {
+    background-color: var(--color-primary-light);
+}
+
+.operators-btn-success-light {
+    background-color: var(--color-success-light);
+}
+
+.info-buttons-container{
+    margin: 2em 1em 1em 1em;
+    gap: 1em
+}
+
+.btn-rounded{
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    width: auto;
+}
+
+.btn-rounded>i{
+    font-size: 1.6em;
+    padding: 0em 0em 0em  0.5em;
+}
+
+.my-form-label{
+    cursor: pointer;
+}
+
+.my-form-label>i{
+    margin-right: 1rem;
+    font-size: 1.5em;
+}
+
+.searchOfertasResultados {
+    background-color: var(--color-information-light);    
+    position: absolute; 
+    top: 2.5em; 
+    left: 3.5em;
+    width: 620px;
+    z-index: 10;
+    padding: 0;    
+}
+
+
+
+.searchOfertasResultado{
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0.2em 0.8em;
+    width: 100%;
+    
+}
+.searchOfertasResultado:hover{
+    background-color: hsl(205, 100%, 78%);
+}

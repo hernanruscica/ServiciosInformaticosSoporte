@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armador de respuestas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="container ">
+        <div class="row my-4 align-items-center">            
+                <i class="col-1 fa-regular fa-comment-dots main-title-icon"></i>
+                <h1 class="col-9 display-6 main-title">Armador de respuestas</h1>            
+        </div>        
+        <div class="row alert alert-primary align-items-center info-card" role="alert">
+            <i class="col-1 fa-solid fa-circle-info info-icon"></i>
+            <p class="col-10">
+                Permite armar respuestas en base a plantillas, ofertas, instructivos y respuestas genéricas sobre solicitudes y/o incidentes. 
+                Al hacer click en [COPIAR] se copia la respuesta, incluyendo enlaces en formato HTML. Además pasa al “historial” de respuestas generadas.
+            </p>
+        </div>
+
+        <!--Estimado y plantilla-->
+        <div class="row alert alert-secondary align-items-center" role="alert">
+            <div class="col-3  ">
+                <label for = "inlineRadio1" class="form-label my-form-label">Estimad  </label>                
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label my-form-label" for="inlineRadio1">O</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label my-form-label" for="inlineRadio2">A</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                    <label class="form-check-label my-form-label" for="inlineRadio3">E</label>
+                </div>
+            </div>
+            <div class="col-3  dropdown  align-items-center">                
+                                
+                <button class=" btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="exampleFormControlInput1">
+                  Seleccione una plantilla
+                </button>
+                <ul class="col dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Ofertas del portal</a></li>
+                  <li><a class="dropdown-item" href="#">Instructivos del portal</a></li>
+                  <li><a class="dropdown-item" href="#">Respuestas genéricas</a></li>
+                  <li><a class="dropdown-item" href="#">Ninguna</a></li>
+                </ul>
+            </div>
+            <div class="col-6 row align-items-center border  p-0" style="position: relative; ">                
+                <i class="col-1 fa-solid fa-magnifying-glass fs-4"></i>
+                <input type="search" class=" col form-control border " id="input-busqueda" placeholder="nombre de oferta o instructivo">
+
+                <div class="searchOfertasResultados" id="searchOfertasResultados"></div>
+
+                <i class="col-1 fa-solid fa-circle-plus operators-btn operators-btn-success border  "></i>
+            </div>  
+              
+        </div>
+        <!--Estimado y plantilla-->
+
+        <!--Buscador
+        <div class="row alert alert-secondary align-items-center" role="alert">
+               
+        </div>-->
+        <!--Buscador-->
+
+        <!--vista previa respuesta-->
+        <div class="  align-items-center" role="alert">
+            <h2 class=" fw-light align-items-center secondary-title">
+                <i class="fa-regular fa-eye secundary-title-icon"></i>
+                <span>Vista previa de la respuesta</span>
+            </h2>     
+            <div class="alert alert-info info-card" role="alert">
+                <p >
+                    Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas. 
+                    Le envío el enlace a la misma.
+                    enlace/es: 
+                </p>
+                <ul>
+                    <li>                        
+                        <a href="">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
+                    </li>
+                    <li>                        
+                        <a href="">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
+                    </li>
+                </ul>
+                <p>Quedamos a su disposición.
+                </p>
+                <div class="row info-buttons-container">
+                    <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
+                        Copiar <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <button type="button" class="col-2 btn btn-warning btn-rounded operators-btn-accent-light">
+                        Editar <i class="fa-regular fa-edit "></i>
+                    </button>
+                </div>
+              </div>
+        </div>
+        <!--vista previa respuesta-->
+
+        <!--Historial de respuestas-->        
+        <div class="  align-items-center" role="alert">
+            <h2 class="fw-light align-items-center secondary-title">
+                <i class="fa-regular fa-calendar secundary-title-icon"></i>
+                <span>Historial de respuestas</span>
+            </h2>    
+            
+            <!--respuesta en el historial-->
+            <h3 class="fw-light mb-0 fs-5" >09 de Junio de 2023</h3> 
+            <div class="alert alert-info info-card" role="alert">
+                <p >
+                    Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas. 
+                    Le envío el enlace a la misma.
+                    enlace/es: 
+                </p>
+                <ul>
+                    <li  >                        
+                        <a href="">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Forzado de contraseña para usuario del sistema Mesa de Entradas
+                        </a>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
+                    </li>
+                    <li >                        
+                        <a href="" >
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
+                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
+                    </li>
+                </ul>
+                <p>Quedamos a su disposición.
+                </p>
+                <div class="row info-buttons-container">
+                    <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
+                        Copiar <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <button type="button" class="col-2 btn btn-warning btn-rounded operators-btn-accent-light">
+                        Editar <i class="fa-regular fa-edit "></i>
+                    </button>
+                </div>         
+            </div>
+            <!--respuesta en el historial-->
+
+            <!--respuesta en el historial-->
+            <h3 class="fw-light mb-0 fs-5" >09 de Junio de 2023</h3> 
+            <div class="alert alert-info info-card" role="alert">                
+                <form action="">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Respuesta: </label>
+                        <!--&#13; new line in textarea-->
+                        <textarea  class="form-control" id="exampleFormControlTextarea1" rows="10" style="height: auto;">Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas.Le envío el enlace a la misma.&#13;Enlace/es:&#13;<a href="https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/3e49e3d9-a68e-8326-17db-c1bf8bd75338,9aa0db36-9edc-ec44-d64b-e5d35fc3f23d" target="_blank">Forzado de contraseña para usuario del sistema Mesa de Entradas</a>&#13;&#13;Quedamos a su disposición.                            
+                        </textarea>
+                    </div>
+                </form>                      
+                <div class="row info-buttons-container">
+                    <button type="button" class="col-2 btn btn-success btn-rounded operators-btn-success-light">
+                        Guardar <i class="fa-regular fa-save"></i>
+                    </button>                    
+                </div>      
+            </div>
+            <!--respuesta en el historial-->
+
+
+        <!--Historial de respuestas-->
+
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+          <div class="row sub-footer">
+            <div class="container">
+              <div class="col-sm-6 m-y-1 p-x-0">
+                    <img class="image-responsive" height="80" src="primerolagente.svg" alt="Primero la gente">
+                    <!--
+                    <p class="text-muted small m-b-2">
+                        <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noreferrer">Los contenidos de Argentina.gob.ar están licenciados bajo Creative Commons Atribución 4.0 Internacional</a>            
+                    </p>  -->
+                    <p class="text-muted medium m-b-2">Esta página web está construída con HTML, Bootstrap y la guia de estilos PONCHO. 
+                        CSS personalizado para los mensaje en pantalla y JavaScript para las funcionalidades. 
+                        Por <a href="https://github.com/hernanruscica" target="_blank" rel="noreferrer">Cesar Ruscica</a> 2022            
+                    </p> <!-- -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="index2.js"></script>
+</body>
+</html>
