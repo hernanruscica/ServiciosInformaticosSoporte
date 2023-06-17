@@ -14,6 +14,11 @@ let respuestaEstado = {
     plantilla: 0,
     enlaces: []
 }
+let ofertaSeleccionadaEstado = {
+        id: null,
+        nombre: null,
+        enlace: null    
+}
 const ofertas = [
     {    
         id: "0",
@@ -29,7 +34,7 @@ const ofertas = [
         id: "2",
         nombre: "Forzado de contraseña para usuario del sistema Mesa de Entradas",
         enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
-        },
+        }
 
 ];
 
@@ -49,8 +54,31 @@ $d.addEventListener('keyup', (e)=> {
     }
 })
 
-$d.addEventListener('click', (e) => {
-    console.log(e.target.value);
+$d.addEventListener('click', (e) => {    
+    if (e.target.classList.contains('searchOfertasResultado')) {
+        //console.log(e.target.dataset.id);    
+        ofertaSeleccionadaEstado.id = e.target.dataset.id;        
+        ofertaSeleccionadaEstado.nombre = e.target.dataset.nombre; 
+        ofertaSeleccionadaEstado.enlace = e.target.dataset.enlace; 
+        $d.getElementById('input-busqueda').value = ofertaSeleccionadaEstado.nombre;
+        mostrarDropdownBusqueda([], 'input-busqueda');
+    }    
+    if (e.target.parentElement.classList.contains('searchOfertasResultado')){
+       //console.log('el padre tiene searchOfertasResultado');    
+       //console.log(e.target.parentElement.dataset.id);
+       ofertaSeleccionadaEstado.id = e.target.parentElement.dataset.id;
+       ofertaSeleccionadaEstado.nombre = e.target.parentElement.dataset.nombre; 
+       ofertaSeleccionadaEstado.enlace = e.target.parentElement.dataset.enlace;
+       $d.getElementById('input-busqueda').value = ofertaSeleccionadaEstado.nombre;
+       mostrarDropdownBusqueda([], 'input-busqueda');
+    }
+    if (e.target.id == 'agregar-oferta'){
+        console.log(`agrego la oferta, si no esta vacia .. (null) ${ofertaSeleccionadaEstado.nombre}`);
+        if (ofertaSeleccionadaEstado.id != null && ofertaSeleccionadaEstado.nombre != null && ofertaSeleccionadaEstado.enlace != null) {
+            respuestaEstado.enlaces.push(ofertaSeleccionadaEstado)
+        }   
+    }
+    
 });
 
 
@@ -62,10 +90,21 @@ const mostrarDropdownBusqueda = (ofertas, idPadre) => {
     
     $divResultados.innerHTML = "";    
     ofertas.forEach((oferta) => {
+    /*
+        <div class="searchOfertasResultado">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>${oferta.nombre}</span>
+        </div>
+    */
         let $divResultado =  $d.createElement("div");
-        $divResultado.classList.add("searchOfertasResultado");      
-        $divResultado.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                   <span>${oferta.nombre}</span>`;        
+        $divResultado.classList.add("searchOfertasResultado");    
+        $divResultado.setAttribute('data-id', `${oferta.id}`);  
+        $divResultado.setAttribute('data-nombre', `${oferta.nombre}`);
+        $divResultado.setAttribute('data-enlace', `${oferta.enlace}`);
+        $divResultado.innerHTML = `                                   
+                                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                   <span>${oferta.nombre}</span>
+                                   `;        
         $divResultados.appendChild($divResultado);
     });       
     $inputPadre.insertAdjacentElement("afterend",$divResultados);    
