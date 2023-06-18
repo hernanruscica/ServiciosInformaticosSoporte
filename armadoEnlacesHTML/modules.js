@@ -37,6 +37,89 @@ export const ofertas = [
 
 ];
 
+export const enlaces = [
+    [
+        {    
+            id: "0",
+            nombre: "PC/Notebook no enciende/no inicia",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/a4e1b960-9cd2-2f17-bc5e-7616926f31c1,dbfb7389-fde0-f03c-235d-92ecfe22d90a"    
+        },
+        {    
+            id: "1",
+            nombre: "Error al utilizar una aplicación pc",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
+        },
+        {    
+            id: "2",
+            nombre: "Forzado de contraseña para usuario del sistema Mesa de Entradas",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
+        },
+        {    
+            id: "3",
+            nombre: "Error de conectividad a través de VPN o Escritorio Remoto",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/c5a3ba0d-6aed-43f4-9381-b95e96df59fd,07a6ff50-bcea-5025-ff81-d8274e395927"    
+        },
+        {    
+            id: "4",
+            nombre: "Error al acceder a una aplicación",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/fd68da9a-2b28-c78e-b080-ba1e5273986a,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
+        },
+        {    
+            id: "5",
+            nombre: "Error al utilizar PNRT",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/16ac3e93-5dc2-c1e1-8e9a-619d94566096,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
+        },
+        {    
+            id: "6",
+            nombre: "Error en Tablet",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/c730a651-e540-9afc-8aea-0114f3a76056,4752bf4e-386f-7b3d-81ad-59ef9ac55c7a"    
+        },
+        {    
+            id: "7",
+            nombre: "Error al utilizar software instalado en PC",
+            enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/66ea06ba-2566-6fef-719d-595819bbb648,dbfb7389-fde0-f03c-235d-92ecfe22d90a"    
+        },
+
+    ],
+    [
+        {    
+            id: "0",
+            nombre: "¿Qué es y cómo realizar una captura de pantalla?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KB/KnowledgeBase/View/5#/"    
+        },
+        {    
+            id: "1",
+            nombre: "¿Cómo agregar información a un requerimiento que ya registré?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/8#/"    
+        },
+        {    
+            id: "2",
+            nombre: "¿Qué es y cómo reportar una falla?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/25#/"    
+        },
+        {    
+            id: "3",
+            nombre: "Manual de uso del Centro de Atenciòn de Sevicios Informaticos",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/33#/"    
+        },
+        {    
+            id: "4",
+            nombre: "¿Cómo configuro una impresora de red en mi PC?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/11#/"    
+        },
+        {    
+            id: "5",
+            nombre: "¿Cómo realizar el forzado de clave para usuarios de red?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/13#/"    
+        },
+        {    
+            id: "6",
+            nombre: "¿Cómo registrarse para poder realizar un autoforzado de clave para usuarios de red?",
+            enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/14#/"    
+        }
+    ]
+];
+
 export const barraPrincipal = (idPadre, estadosBarraPrincipal) => {
 
     const selectedSujeto = ['', '', ''];    

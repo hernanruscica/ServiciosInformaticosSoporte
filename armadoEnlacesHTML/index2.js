@@ -1,4 +1,4 @@
-import {barraPrincipal, vistaPrevia, sujetos, ofertas, plantillas} from './modules.js';
+import {barraPrincipal, vistaPrevia, sujetos, ofertas, enlaces, plantillas} from './modules.js';
 const $d = document;
 
 
@@ -27,7 +27,7 @@ let estadosBarraPrincipal = {
 
 const buscarOfertas = (busqueda) => {
     let busquedaMinus = busqueda.toLowerCase()
-    let respuestas = ofertas.filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus));    
+    let respuestas = enlaces[estadosBarraPrincipal.plantilla].filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus));    
     return respuestas;
 }
 
@@ -67,9 +67,9 @@ $d.addEventListener('click', (e) => {
         console.log(`agrego la oferta, si no esta vacia .. (null) ${estadosBarraPrincipal.oferta}`);
         if (estadosBarraPrincipal.oferta != null ) {
             respuestaEstado.enlaces.push({
-                id: ofertas[estadosBarraPrincipal.oferta].id,
-                nombre: ofertas[estadosBarraPrincipal.oferta].nombre, 
-                enlace: ofertas[estadosBarraPrincipal.oferta].enlace
+                id: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].id,
+                nombre: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].nombre, 
+                enlace: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].enlace
             });
             estadosBarraPrincipal.oferta = null;
             barraPrincipal('barraPrincipal', estadosBarraPrincipal);
@@ -80,8 +80,12 @@ $d.addEventListener('click', (e) => {
     if (e.target.id == "ofertas-select"){
         console.log(`click en las ofertas - opcion ${e.target.value}`);
         estadosBarraPrincipal.plantilla = e.target.value;
-        respuestaEstado.plantilla = e.target.value;
+        respuestaEstado.plantilla = e.target.value;        
         vistaPrevia('vista-previa', respuestaEstado);
+        mostrarDropdownBusqueda([], 'input-busqueda');
+        $d.getElementById("input-busqueda").value = '';
+        //respuestaEstado.enlaces = [];
+
     }
     
     if (e.target.id == "sujeto-select"){
