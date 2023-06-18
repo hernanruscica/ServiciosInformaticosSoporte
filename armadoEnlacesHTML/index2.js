@@ -1,3 +1,4 @@
+import {barraPrincipal, vistaPrevia, sujetos, ofertas, plantillas} from './modules.js';
 const $d = document;
 
 
@@ -10,39 +11,32 @@ plantillas, tipo de plantillas a cargar:
 3. ninguna, sin un texto predeterminado, se podria usar para sacar el enlace a una oferta o instructivo.
 */
 let respuestaEstado = {
-    sujeto: "Estimado",
+    sujeto: 0,
     plantilla: 0,
     enlaces: []
 }
-let ofertaSeleccionadaEstado = {
-        id: null,
-        nombre: null,
-        enlace: null    
-}
-const ofertas = [
-    {    
-        id: "0",
-        nombre: "PC/Notebook no enciende/no inicia",
-        enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/a4e1b960-9cd2-2f17-bc5e-7616926f31c1,dbfb7389-fde0-f03c-235d-92ecfe22d90a"    
-    },
-    {    
-        id: "1",
-        nombre: "Error al utilizar una aplicación pc",
-        enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
-    },
-    {    
-        id: "2",
-        nombre: "Forzado de contraseña para usuario del sistema Mesa de Entradas",
-        enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
-        }
 
-];
+/*ESTADOS barra principal*/
+let estadosBarraPrincipal = {
+    sujeto : 0,
+    plantilla: 0,
+    oferta: null
+}
+/*ESTADOS barra principal*/
+
 
 const buscarOfertas = (busqueda) => {
     let busquedaMinus = busqueda.toLowerCase()
     let respuestas = ofertas.filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus));    
     return respuestas;
 }
+
+$d.addEventListener('DOMContentLoaded', (e) => {
+    console.log("documento cargado");
+    //$d.getElementById('barraPrincipal').innerHTML = barraPrincipal();
+    barraPrincipal('barraPrincipal', estadosBarraPrincipal);
+    vistaPrevia('vista-previa', respuestaEstado);
+});
 
 $d.addEventListener('keyup', (e)=> {
     if (e.target.id == 'input-busqueda' && e.target.value != "" && e.target.value != " "){
@@ -57,28 +51,45 @@ $d.addEventListener('keyup', (e)=> {
 $d.addEventListener('click', (e) => {    
     if (e.target.classList.contains('searchOfertasResultado')) {
         //console.log(e.target.dataset.id);    
-        ofertaSeleccionadaEstado.id = e.target.dataset.id;        
-        ofertaSeleccionadaEstado.nombre = e.target.dataset.nombre; 
-        ofertaSeleccionadaEstado.enlace = e.target.dataset.enlace; 
-        $d.getElementById('input-busqueda').value = ofertaSeleccionadaEstado.nombre;
+        estadosBarraPrincipal.oferta = e.target.dataset.id;        
+        
+        $d.getElementById('input-busqueda').value = e.target.dataset.nombre;
         mostrarDropdownBusqueda([], 'input-busqueda');
-    }    
-    if (e.target.parentElement.classList.contains('searchOfertasResultado')){
-       //console.log('el padre tiene searchOfertasResultado');    
-       //console.log(e.target.parentElement.dataset.id);
-       ofertaSeleccionadaEstado.id = e.target.parentElement.dataset.id;
-       ofertaSeleccionadaEstado.nombre = e.target.parentElement.dataset.nombre; 
-       ofertaSeleccionadaEstado.enlace = e.target.parentElement.dataset.enlace;
-       $d.getElementById('input-busqueda').value = ofertaSeleccionadaEstado.nombre;
-       mostrarDropdownBusqueda([], 'input-busqueda');
-    }
+    } else if (e.target.parentElement.classList.contains('searchOfertasResultado')){
+                //console.log('el padre tiene searchOfertasResultado');    
+                //console.log(e.target.parentElement.dataset.id);
+                estadosBarraPrincipal.oferta = e.target.parentElement.dataset.id;
+                
+                $d.getElementById('input-busqueda').value = e.target.parentElement.dataset.nombre;
+                mostrarDropdownBusqueda([], 'input-busqueda');
+            }
     if (e.target.id == 'agregar-oferta'){
-        console.log(`agrego la oferta, si no esta vacia .. (null) ${ofertaSeleccionadaEstado.nombre}`);
-        if (ofertaSeleccionadaEstado.id != null && ofertaSeleccionadaEstado.nombre != null && ofertaSeleccionadaEstado.enlace != null) {
-            respuestaEstado.enlaces.push(ofertaSeleccionadaEstado)
-        }   
+        console.log(`agrego la oferta, si no esta vacia .. (null) ${estadosBarraPrincipal.oferta}`);
+        if (estadosBarraPrincipal.oferta != null ) {
+            respuestaEstado.enlaces.push({
+                id: ofertas[estadosBarraPrincipal.oferta].id,
+                nombre: ofertas[estadosBarraPrincipal.oferta].nombre, 
+                enlace: ofertas[estadosBarraPrincipal.oferta].enlace
+            });
+            estadosBarraPrincipal.oferta = null;
+            barraPrincipal('barraPrincipal', estadosBarraPrincipal);
+            vistaPrevia('vista-previa', respuestaEstado);
+        }  
+        console.log(respuestaEstado.enlaces);
+    }
+    if (e.target.id == "ofertas-select"){
+        console.log(`click en las ofertas - opcion ${e.target.value}`);
+        estadosBarraPrincipal.plantilla = e.target.value;
+        respuestaEstado.plantilla = e.target.value;
+        vistaPrevia('vista-previa', respuestaEstado);
     }
     
+    if (e.target.id == "sujeto-select"){
+        console.log(`click en el sujeto - opcion ${e.target.value}`);
+        estadosBarraPrincipal.sujeto = e.target.value;
+        respuestaEstado.sujeto = e.target.value;
+        vistaPrevia('vista-previa', respuestaEstado);
+    }
 });
 
 
