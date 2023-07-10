@@ -1,4 +1,4 @@
-import {barraPrincipal, vistaPrevia, sujetos, ofertas, enlaces, plantillas} from './modules.js';
+import {barraPrincipal, barraPrincipal2, vistaPrevia, sujetos, ofertas, enlaces, plantillas} from './modules.js';
 const $d = document;
 
 
@@ -25,22 +25,23 @@ let estadosBarraPrincipal = {
 /*ESTADOS barra principal*/
 
 
-const buscarOfertas = (busqueda) => {
+const buscarEnlaces = (busqueda) => {
     let busquedaMinus = busqueda.toLowerCase()
-    let respuestas = enlaces[estadosBarraPrincipal.plantilla].filter((oferta) => oferta.nombre.toLowerCase().includes(busquedaMinus));    
-    return respuestas;
+    let indice = estadosBarraPrincipal.plantilla;     
+    let enlacesEncontrados = enlaces[indice].filter((enlace) => enlace.nombre.toLowerCase().includes(busquedaMinus));    
+    return enlacesEncontrados;
 }
 
 $d.addEventListener('DOMContentLoaded', (e) => {
     console.log("documento cargado");
     //$d.getElementById('barraPrincipal').innerHTML = barraPrincipal();
-    barraPrincipal('barraPrincipal', estadosBarraPrincipal);
+    barraPrincipal2('barraPrincipal', estadosBarraPrincipal);
     vistaPrevia('vista-previa', respuestaEstado);
 });
 
 $d.addEventListener('keyup', (e)=> {
     if (e.target.id == 'input-busqueda' && e.target.value != "" && e.target.value != " "){
-        let ofertasEncontradas = buscarOfertas(e.target.value);             
+        let ofertasEncontradas = buscarEnlaces(e.target.value);             
         mostrarDropdownBusqueda(ofertasEncontradas, e.target.id);       
     }else{
         let $divResultados = $d.getElementById("searchOfertasResultados");    
@@ -56,8 +57,7 @@ $d.addEventListener('click', (e) => {
         $d.getElementById('input-busqueda').value = e.target.dataset.nombre;
         mostrarDropdownBusqueda([], 'input-busqueda');
     } else if (e.target.parentElement.classList.contains('searchOfertasResultado')){
-                //console.log('el padre tiene searchOfertasResultado');    
-                //console.log(e.target.parentElement.dataset.id);
+                
                 estadosBarraPrincipal.oferta = e.target.parentElement.dataset.id;
                 
                 $d.getElementById('input-busqueda').value = e.target.parentElement.dataset.nombre;
@@ -72,7 +72,7 @@ $d.addEventListener('click', (e) => {
                 enlace: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].enlace
             });
             estadosBarraPrincipal.oferta = null;
-            barraPrincipal('barraPrincipal', estadosBarraPrincipal);
+            barraPrincipal2('barraPrincipal', estadosBarraPrincipal);
             vistaPrevia('vista-previa', respuestaEstado);
         }  
         console.log(respuestaEstado.enlaces);
@@ -80,11 +80,17 @@ $d.addEventListener('click', (e) => {
     if (e.target.id == "ofertas-select"){
         console.log(`click en las ofertas - opcion ${e.target.value}`);
         estadosBarraPrincipal.plantilla = e.target.value;
-        respuestaEstado.plantilla = e.target.value;        
+        respuestaEstado.plantilla = e.target.value;    
+        respuestaEstado.enlaces = [];            
         vistaPrevia('vista-previa', respuestaEstado);
-        mostrarDropdownBusqueda([], 'input-busqueda');
-        $d.getElementById("input-busqueda").value = '';
-        //respuestaEstado.enlaces = [];
+        mostrarDropdownBusqueda([], 'input-busqueda');        
+        $d.getElementById("input-busqueda").value = '';        
+        if (parseInt(respuestaEstado.plantilla) > 1){
+            
+            $d.getElementById("input-busqueda").setAttribute('disabled', 'true');
+        }else{
+            $d.getElementById("input-busqueda").removeAttribute('disabled', 'false');
+        }        
 
     }
     

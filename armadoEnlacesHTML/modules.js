@@ -10,12 +10,67 @@ export const plantillas = [
                 contenido: ", en el portal de “Soporte Sistemas”, existe un artículo de conocimiento que puede serle de utilidad. <br>Quedamos a su disposición.<br>Le enviamos los enlaces:<br>"    
                 },
                 {id: "2",
-                nombre: "Respuestas genericas",
-                contenido: "diferentes contenidos, segun la respuesta elegida de un array con objetos que tienen un titulo y una descripcion. Son respuestas genericas para problemas y solicitudes populares."    
+                nombre: "Forzado de contraseña",
+                contenido: `, necesita hacer el forzado de contraseña, lo puede hacer el usuario afectado u otro usuario en su nombre. Primero, tiene que ingresar los datos del usuario afectado, al hacerlo, aparecerán más opciones, entre las cuales deberá seleccionar “Modificación” y luego “Forzado de contraseña”.
+                Le enviamos el formulario de forzado de contraseña indicado: <a href = 'https://login-int.trabajo.gob.ar/adfs/ls?wtrealm=https://tramites.trabajo.gob.ar&wreply=https://tramites.trabajo.gob.ar/auth?redirect_url=/%23/gsr/create/form/6388b37dd17ea0000d877e69&whr=https://login-int.trabajo.gob.ar/adfs/services/trust&accion=login&wa=wsignin1.0' target = '_blank'>Gestion de Servicios de Red</a>
+                Cualquier otra duda, estamos a su disposición.
+                `
                 },
                 {id: "3",
-                nombre: "Ninguna",                
-                contenido: ""/*ninguna plantilla, para generar solo un enlace o una lista de enlaces a una oferta/as o instructivo/os especificos. */    
+                nombre: "Ampliar Casilla Outlook",                
+                contenido: `, le envio los articulos de conocimiento del portal de soporte sistemas, el primero sobre como liberar espacio en su casilla de outlook, y el segundo sobre cómo pedir una ampliación de la misma:
+                <a href='https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/24#/' target = '_blank'>¿Cómo liberar espacio en el correo electrónico mediante Microsoft Outlook?</a><br>
+                <a href = 'https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/35#/' target = '_blank'>¿Cómo solicitar más espacio en casilla de Outlook ?</a><br>
+                Cualquier otra duda, estamos a su disposición.
+                `
+                },
+                {id: "4",
+                nombre: "Pedir Captura",
+                contenido: `, para poder diagnosticar mejor el incidente, necesitamos una captura de pantalla completa, del momento del incidente.
+                Le paso un articulo que podria serle útil: <a href = 'https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/5#/' target = '_blank'>¿Qué es y cómo realizar una captura de pantalla?</a>
+                Además le recuerdo que tal vez ya exista una oferta para reportar dicho incidente, en el portal de Soporte Sistemas, dicho método es más ágil que la "Genérica", ya que implica un paso más, que es categorizar el incidente.
+                <a href = 'https://soportesistemas.trabajo.gob.ar/' target = '_blank'>Portal de Soporte Sistemas</a>
+                Quedamos a su disposición.
+                `
+                },
+                {id: "5",
+                nombre: "Pedir Formulario",
+                contenido: `, necesitamos que nos envíe el formulario mencionado o el enlace al mismo, de esta manera podremos identificar más rápidamente, el área que podría solucionarlo.. Gracias.
+                Quedamos a su disposición.
+                `
+                },
+                {id: "6",
+                nombre: "Servicios Especiales de Internet",
+                contenido: `, para acceder a esos sitios web, necesita completar el formulario de “Servicios Especiales de Internet”. Primero debe ingresar sus datos o los de la persona para quien los solicita, y luego indicar que servicios necesita desbloquear.
+                Le envio el enlace a dicho formulario: <a href = 'https://tramites.trabajo.gob.ar/#/gsr/create/form/62715705c9e3165e01cb21c2' target = '_blank'>Formulario de Servicios Especiales de Internet</a>
+                Quedamos a su disposición.
+                `
+                },
+                {id: "7",
+                nombre: "Speech Streaming",
+                contenido: `, le paso las indicaciones:
+                “Para requerimientos de acceso a Redes Sociales y Streaming se solicita que vía correo electrónico a <a href= 'mailto: seguridad-informatica@trabajo.gob.ar'>seguridad-informatica@trabajo.gob.ar</a>, el Funcionario responsable indique las razones de servicio que justifiquen el acceso a estos recursos que utilizan tráfico multimedia. La nueva metodología de aprobación se basa principalmente en lograr la utilización del ancho de banda en forma equitativa entre los usuarios del MTEySS.”
+                Quedamos a su disposición.
+                `
+                },
+                {id: "8",
+                nombre: "Pedido de Instalacion de Software",
+                contenido: `, tiene que enviar un Memo a través de GDE, dirigido a la Dirección General de Informática e Innovación Tecnológica. Indicando el software y el uso que se le dará, el GDE tiene que estar aprobado por un firmante autorizado.
+                Quedamos a su disposición.
+                `
+                },
+                {id: "9",
+                nombre: "Incidentes en GDE",
+                contenido: `, le informamos que las fallas e inconvenientes técnicos relacionados al sistema de Gestión Documental Electrónico (GDE), deberá reportarlos ingresando al servicio de ayuda de la Subsecretaría de Innovación Administrativa perteneciente a la Jefatura de Gabinete de Ministros:
+                <a href = 'https://incidencias.innovacion.gob.ar/servicedesk/customer/portal/1/user/login?destination=portal%2F1%2Fcreate' target = '_blank'>incidencias.innovacion.gob.ar</a>
+                Logueandose con el usuario y contraseña de GDE.<br>
+                Quedamos a su disposición para cualquier otro tema.                
+                `
+                }
+                ,
+                {id: "99",
+                nombre: "",
+                contenido: ``
                 }
 ];
 export const ofertas = [
@@ -117,7 +172,8 @@ export const enlaces = [
             nombre: "¿Cómo registrarse para poder realizar un autoforzado de clave para usuarios de red?",
             enlace: "https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/14#/"    
         }
-    ]
+    ],
+
 ];
 
 export const barraPrincipal = (idPadre, estadosBarraPrincipal) => {
@@ -155,6 +211,39 @@ export const barraPrincipal = (idPadre, estadosBarraPrincipal) => {
             `
 }
 
+export const barraPrincipal2 = (idPadre, estadosBarraPrincipal) => {
+
+    let respuesta = `            
+            <div class="col-2  ">
+                <select class="form-select" aria-label="Default select example" id="sujeto-select">                    
+                `;
+    sujetos.forEach((sujeto, index) => {
+            respuesta += `<option value="${ index }" ${ index == 0 ? 'selected' : '' }>${ sujeto }</option>`
+    });             
+
+    respuesta += `</select>
+            </div>
+            <div class="col-3  dropdown  align-items-center">  
+                <select class="form-select" aria-label="Default select example" id="ofertas-select">                    
+                `;
+    plantillas.forEach((plantilla, index) => {
+            respuesta += `<option value="${ index }" ${ index == 0 ? 'selected' : '' }>${ plantilla.nombre }</option>`
+
+    });
+    respuesta += `</select>                
+            </div>
+            <div class="col-7 row align-items-center border  p-0" style="position: relative; ">                
+                <i class="col-1 fa-solid fa-magnifying-glass fs-4"></i>
+                <input type="search"  class=" col form-control border " id="input-busqueda" placeholder="nombre de oferta o instructivo" value="${(estadosBarraPrincipal.oferta != null) ? ofertas[estadosBarraPrincipal.oferta]["nombre"] : ''}">
+
+                <div class="searchOfertasResultados" id="searchOfertasResultados"></div>
+
+                <i class="col-1 fa-solid fa-circle-plus operators-btn operators-btn-success border  " id = "agregar-oferta"></i>
+            </div> `;
+    console.log(estadosBarraPrincipal);
+    document.getElementById(idPadre).innerHTML = respuesta;
+}
+
 export const vistaPrevia = (idPadre, respuestaEstado) => {
 
     let $tarjetaRespuestaIntro =  `<h2 class=" fw-light align-items-center secondary-title">
@@ -165,7 +254,8 @@ export const vistaPrevia = (idPadre, respuestaEstado) => {
                 <p >
                     ${sujetos[respuestaEstado.sujeto] + plantillas[respuestaEstado.plantilla].contenido}
                 </p>`;
-    let $tarjetaRespuestaEnlaces =  '<ul>';
+        
+    let $tarjetaRespuestaEnlaces  =  '<ul>';
     respuestaEstado.enlaces.forEach(enlace => {
         $tarjetaRespuestaEnlaces += `<li>                        
                                         <a href="${enlace.enlace}" target="_BLANK">
@@ -175,8 +265,7 @@ export const vistaPrevia = (idPadre, respuestaEstado) => {
                                     </li>
                                     `    
     });
-    $tarjetaRespuestaEnlaces += '</ul>';
-    
+    $tarjetaRespuestaEnlaces += '</ul>';   
 
     let $tarjetaRespuestaBotones = `<div class="row info-buttons-container">
                                         <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
