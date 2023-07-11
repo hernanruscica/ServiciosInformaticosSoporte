@@ -32,43 +32,7 @@
 
         <!--vista previa respuesta-->
         <div class="align-items-center" role="alert" id="vista-previa">
-            <!--
-            <h2 class=" fw-light align-items-center secondary-title">
-                <i class="fa-regular fa-eye secundary-title-icon"></i>
-                <span>Vista previa de la respuesta</span>
-            </h2>     
-            <div class="alert alert-info info-card" role="alert">
-                <p >
-                    Estimada, en el portal de "Soporte Sistemas", existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas. 
-                    Le envío el enlace a la misma.
-                    enlace/es: 
-                </p>
-                <ul>
-                    <li>                        
-                        <a href="">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
-                    </li>
-                    <li>                        
-                        <a href="">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Forzado de contraseña para usuario del sistema Mesa de Entradas</a>
-                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
-                    </li>
-                </ul>
-                <p>Quedamos a su disposición.
-                </p>
-                <div class="row info-buttons-container">
-                    <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
-                        Copiar <i class="fa-regular fa-copy"></i>
-                    </button>
-                    <button type="button" class="col-2 btn btn-warning btn-rounded operators-btn-accent-light">
-                        Editar <i class="fa-regular fa-edit "></i>
-                    </button>
-                </div>
-            </div>
-            -->
+            
         </div>
         <!--vista previa respuesta-->
 
@@ -160,8 +124,52 @@
         </div>
       </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <script src="index2.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="./index2.js" type="module"></script>
+    <script>
+        function mostrarCopiado(id){
+            document.getElementById(id).classList.toggle('visible');
+            const boton = document.getElementById(id).parentElement;
+            boton.disabled = true;
+            setTimeout(() => {
+                document.getElementById(id).classList.toggle('visible');                
+                boton.disabled = false;                                
+            }, "1000");
+        }
+        
+         function copyToClickBoard(){
+            mostrarCopiado('tooltip_copiado');
+            let content = document.getElementById('vista_previa_parrafo').innerHTML.trim() + `\n`;
+            let enlaces = document.querySelectorAll("#vista_previa_enlace");        
+            enlaces.forEach(enlace => content += `<a href="${enlace}" target="_blank">${enlace.dataset.nombre}</a>\n`)
+            
+            const menor = '&lt;';
+            const mayor = '&gt;'; 
+            /*
+            content = content.replaceAll('&lt;', '<');
+            content = content.replaceAll('&gt;', '>');
+            */
+        
+            navigator.clipboard.writeText(content.trim())
+                .then(() => {
+                console.log("Text copied to clipboard...")
+            })
+                .catch(err => {
+                console.log('Something went wrong', err);
+            })
+     
+    }   
+    </script>
+    
 </body>
 </html>
+
+<!-- 
+Estimado, en el portal de “Soporte Sistemas”, existe un artículo de conocimiento que puede serle de utilidad. <br>Quedamos a su disposición.<br>Le enviamos los enlaces:<br>
+                
+<a href="https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/8#/" target="_blank">¿Cómo agregar información a un requerimiento que ya registré?</a><br>
+
+<a href="https://soportesistemas.trabajo.gob.ar/KnowledgeBase/View/33#/" target="_blank">Manual de uso del Centro de Atenciòn de Sevicios Informaticos</a><br>
+-->
+                    

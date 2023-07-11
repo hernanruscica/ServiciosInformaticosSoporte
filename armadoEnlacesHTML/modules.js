@@ -3,7 +3,7 @@ export const sujetos = ["Estimado", "Estimada", "Estimade"];
 export const plantillas = [
                 {id: "0",
                 nombre: "Ofertas en el portal",
-                contenido: ", en el portal de 'Soporte Sistemas', existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas.<br>Quedamos a su disposición.<br>Le enviamos los enlaces:<br>",
+                contenido: ", en el portal de 'Soporte Sistemas', existe una oferta específica para la tarea que desea realizar. Siempre que sea posible, le recomendamos elegir alguna de ellas, ya que se resuelven más rápido que las genéricas.<br>Quedamos a su disposición.<br>Le enviamos los enlaces:",
                 },    
                 {id: "1",
                 nombre: "Art. de conocimiento en el portal",
@@ -66,6 +66,11 @@ export const plantillas = [
                 Logueandose con el usuario y contraseña de GDE.<br>
                 Quedamos a su disposición para cualquier otro tema.                
                 `
+                },
+                {id: "10",
+                nombre: "Se transfiere...",
+                contenido: `, se transfiere al grupo de soporte correspondiente.<br>\nQuedamos a su disposición.
+                `                
                 }
                 ,
                 {id: "99",
@@ -101,7 +106,7 @@ export const enlaces = [
         },
         {    
             id: "1",
-            nombre: "Error al utilizar una aplicación pc",
+            nombre: "Error al utilizar una aplicación",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
         },
         {    
@@ -175,6 +180,23 @@ export const enlaces = [
     ],
 
 ];
+
+export const copyToClickBoard = () => {
+    let content = document.getElementById('enlaceFormatoHTMLid').innerHTML;
+    const menor = '&lt;';
+    const mayor = '&gt;'; 
+    content = content.replaceAll('&lt;', '<');
+    content = content.replaceAll('&gt;', '>');
+
+    navigator.clipboard.writeText(content)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+ 
+}   
 
 export const barraPrincipal = (idPadre, estadosBarraPrincipal) => {
 
@@ -250,34 +272,39 @@ export const vistaPrevia = (idPadre, respuestaEstado) => {
                 <i class="fa-regular fa-eye secundary-title-icon"></i>
                 <span>Vista previa de la respuesta</span>
             </h2>     
-            <div class="alert alert-info info-card" role="alert">
-                <p >
+            <div class="alert alert-info info-card" role="alert" >
+                <p id="vista_previa_parrafo">
                     ${sujetos[respuestaEstado.sujeto] + plantillas[respuestaEstado.plantilla].contenido}
                 </p>`;
         
-    let $tarjetaRespuestaEnlaces  =  '<ul>';
-    respuestaEstado.enlaces.forEach(enlace => {
+    let $tarjetaRespuestaEnlaces  =  '<ul >';
+    respuestaEstado.enlaces.forEach((enlace, index) => {
         $tarjetaRespuestaEnlaces += `<li>                        
-                                        <a href="${enlace.enlace}" target="_BLANK">
+                                        <a href="${enlace.enlace}" target="_BLANK" id="vista_previa_enlace" data-nombre = '${enlace.nombre}'>
                                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                             ${enlace.nombre}</a>
-                                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"></i>
+                                        <i class="fa-solid fa-circle-minus operators-btn operators-btn-danger"  id = "eliminar-oferta" data-id = ${enlace.id}></i>
                                     </li>
                                     `    
     });
     $tarjetaRespuestaEnlaces += '</ul>';   
 
     let $tarjetaRespuestaBotones = `<div class="row info-buttons-container">
-                                        <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light">
-                                            Copiar <i class="fa-regular fa-copy"></i>
+                                        <button type="button" class="col-2 btn btn-primary btn-rounded operators-btn-primary-light"                                             
+                                            onclick = "copyToClickBoard()"
+                                            style="position:relative">
+                                            Copiar 
+                                            <i class="fa-regular fa-copy"></i>
+                                            <div class="mi_tooltip" id="tooltip_copiado">Copiado !</div>
                                         </button>
                                         <button type="button" class="col-2 btn btn-warning btn-rounded operators-btn-accent-light">
                                             Editar <i class="fa-regular fa-edit "></i>
                                         </button>
                                     </div>
-                                    </div>
+                                    </div>                                    
                                     `;
 
     document.getElementById(idPadre).innerHTML = $tarjetaRespuestaIntro + $tarjetaRespuestaEnlaces + $tarjetaRespuestaBotones                           
                 
 }
+

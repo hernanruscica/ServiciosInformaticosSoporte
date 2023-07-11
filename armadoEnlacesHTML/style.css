@@ -201,3 +201,23 @@ body{
 .searchOfertasResultado:hover{
     background-color: hsl(205, 100%, 78%);
 }
+
+.mi_tooltip{
+    width: 8em;
+    position: absolute;
+    top: -2.6em;
+    left: 0px;
+    background-color: #0072bb;
+    padding: 0.5em;
+    border-radius: 50px;
+    transform: scale(0);   
+    opacity: 0%;
+    cursor:default;
+    transition:  all 0.2s ease-in-out;
+}
+
+.visible{
+    transform: scale(1);   
+    opacity: 100%;
+    transition:  all 0.2s ease-in-out;
+}

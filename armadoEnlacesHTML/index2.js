@@ -64,10 +64,14 @@ $d.addEventListener('click', (e) => {
                 mostrarDropdownBusqueda([], 'input-busqueda');
             }
     if (e.target.id == 'agregar-oferta'){
-        console.log(`agrego la oferta, si no esta vacia .. (null) ${estadosBarraPrincipal.oferta}`);
-        if (estadosBarraPrincipal.oferta != null ) {
+        //console.log(`agrego la oferta, si no esta vacia .. (null) ${estadosBarraPrincipal.oferta}`);
+
+        let idEnlaceIncluir = enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].id
+        let incluyeEnlace = respuestaEstado.enlaces.map(enlace => enlace.id).includes(idEnlaceIncluir);
+
+        if (estadosBarraPrincipal.oferta != null && incluyeEnlace === false) {
             respuestaEstado.enlaces.push({
-                id: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].id,
+                id: idEnlaceIncluir,
                 nombre: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].nombre, 
                 enlace: enlaces[estadosBarraPrincipal.plantilla][estadosBarraPrincipal.oferta].enlace
             });
@@ -76,6 +80,22 @@ $d.addEventListener('click', (e) => {
             vistaPrevia('vista-previa', respuestaEstado);
         }  
         console.log(respuestaEstado.enlaces);
+    }
+    if (e.target.id == 'eliminar-oferta'){
+        let idEnlaceEliminar = e.target.dataset.id;
+        console.log(`click en btn eliminar oferta id: ${idEnlaceEliminar}\n`)
+        if (respuestaEstado.enlaces.length > 0){
+            //console.log('el array de enlaces NO esta vacio')
+            
+            let idEnlaces = respuestaEstado.enlaces.map((enlace) => enlace.id);
+            let indiceEnlaceEliminar = idEnlaces.indexOf(idEnlaceEliminar)
+            let enlaceEliminado = respuestaEstado.enlaces.splice(indiceEnlaceEliminar, 1);
+            vistaPrevia('vista-previa', respuestaEstado);
+            
+            //console.log(`los ids de los enlaces son: ${idEnlaces}\nIndice enlace a eliminar: ${indiceEnlaceEliminar}`)            
+            //console.log(enlaceEliminado, respuestaEstado.enlaces);
+        }
+
     }
     if (e.target.id == "ofertas-select"){
         console.log(`click en las ofertas - opcion ${e.target.value}`);
