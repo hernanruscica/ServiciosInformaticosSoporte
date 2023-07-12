@@ -102,41 +102,65 @@ export const enlaces = [
         {    
             id: "0",
             nombre: "PC/Notebook no enciende/no inicia",
+            descripcion: "Permite gestionar los incidentes vinculados a errores que afecten el encendido o inicio de una PC o Notebook y que, por lo tanto, impiden completamente su uso.",
+            keywords: "pc logeo ingresar laptop",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/a4e1b960-9cd2-2f17-bc5e-7616926f31c1,dbfb7389-fde0-f03c-235d-92ecfe22d90a"    
         },
         {    
             id: "1",
-            nombre: "Error al utilizar una aplicación",
+            nombre: "Error al utilizar una aplicación",            
+            descripcion: "Permite gestionar los incidentes vinculados a inconvenientes en el uso de aplicaciones, luego de haber accedido a las mismas. Si, en cambio, no logró acceder a la aplicación, deberá emplear la plantilla 'Error al acceder a una aplicación'.",
+            keywords: "pnrt gestion empleo Juicios portal",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
         },
         {    
             id: "2",
             nombre: "Forzado de contraseña para usuario del sistema Mesa de Entradas",
+            descripcion: "Permite gestionar solicitudes de nuevas contraseñas exclusivamente en el sistema Mesa de Entradas.",
+            keywords: "mesa de entradas",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/7e364b54-2800-2357-ecfa-68bb4f0089b1,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
         },
         {    
             id: "3",
             nombre: "Error de conectividad a través de VPN o Escritorio Remoto",
+            descripcion: "Error de conexión a los equipos del ministerio, o errores en la conexión vía VPN. Incluye el tratamiento de incidentes por equipos apagados.",
+            keywords: "forti escritorio remoto client",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/c5a3ba0d-6aed-43f4-9381-b95e96df59fd,07a6ff50-bcea-5025-ff81-d8274e395927"    
         },
         {    
             id: "4",
             nombre: "Error al acceder a una aplicación",
+            descripcion: "Permite reportar inconvenientes en el acceso a aplicaciones. Aplica, por ejemplo, para errores de acceso a PNRT, Gestión Empleo, Juicios, etc.",
+            keywords: "PNRT, Gestión Empleo, Juicios portal",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/fd68da9a-2b28-c78e-b080-ba1e5273986a,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
         },
         {    
             id: "5",
             nombre: "Error al utilizar PNRT",
+            descripcion: "Permite gestionar inconvenientes con la utilización del sistema PNRT.",
+            keywords: "sistema pnrt",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/16ac3e93-5dc2-c1e1-8e9a-619d94566096,45f5f5af-b3df-8911-ca99-a94b60e68cc0"    
         },
         {    
             id: "6",
             nombre: "Error en Tablet",
+            descripcion: "Permite gestionar fallas en las partes físicas o en las aplicaciones instaladas en las tablets del organismo (por ejemplo, las utilizadas para el sistema INDI).",
+            keywords: "celular tablet indi inspectores at agencia teritorial",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/c730a651-e540-9afc-8aea-0114f3a76056,4752bf4e-386f-7b3d-81ad-59ef9ac55c7a"    
         },
         {    
             id: "7",
             nombre: "Error al utilizar software instalado en PC",
+            descripcion: "Permite gestionar los incidentes vinculados a inconvenientes en el uso de software instalado en la PC. Por ejemplo: Errores en paquete Office (Word, Excel, Outlook, etc.), Adobe, Navegadores de internet, etc.",
+            keywords: "Office (Word, Excel, Outlook, etc.), Adobe, Navegadores de internet",
+            icono: "",
             enlace: "https://soportesistemas.trabajo.gob.ar/SC/ServiceCatalog/RequestOffering/66ea06ba-2566-6fef-719d-595819bbb648,dbfb7389-fde0-f03c-235d-92ecfe22d90a"    
         },
 
